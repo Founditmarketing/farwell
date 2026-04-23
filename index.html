@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farwell Law Firm | Andrew R. Farwell | Kirksville, Missouri Trial Attorney</title>
+<meta name="description" content="Andrew R. Farwell has tried jury cases in 35+ Missouri counties for over two decades. Most attorneys never go to trial. Andrew does. Personal injury, criminal defense, wrongful death — Kirksville, MO.">
+<meta name="theme-color" content="#080a0d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #080a0d;
+  --bg-alt: #0c1016;
+  --bg-deep: #050608;
+  --card: #0f1520;
+  --card-h: #141c28;
+  --chalk: #e8e2d6;
+  --chalk-dim: #d3cdc0;
+  --gold: #b8945a;
+  --gold-lt: #d4b07a;
+  --gold-dk: #8a6a38;
+  --rust: #8B3A2A;
+  --rust-lt: #A84835;
+  --tx: #ede8df;
+  --tx2: #9a9488;
+  --tx3: #5c5850;
+  --txd: #1a1814;
+  --txd2: #4a463e;
+  --txd3: #8a857d;
+  --br: rgba(184,148,90,0.18);
+  --brd: rgba(255,255,255,0.06);
+  --brw: rgba(26,24,20,0.12);
+  --dsp: 'Fraunces', Georgia, serif;
+  --ser: 'Cormorant Garamond', Georgia, serif;
+  --san: 'Outfit', sans-serif;
+  --mon: 'Space Mono', 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { background: var(--bg); color: var(--tx); font-family: var(--san); overflow-x: hidden; cursor: none; }
+::selection { background: var(--rust); color: var(--tx); }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--gold-dk); }
+
+/* ── GRAIN ── */
+.grain { position:fixed; inset:0; pointer-events:none; z-index:99998; opacity:.04; mix-blend-mode:overlay; }
+
+/* ── SCROLL PROGRESS ── */
+.spg { position:fixed; top:0; left:0; width:0; height:2px; background:linear-gradient(90deg,var(--rust),var(--gold)); z-index:10001; pointer-events:none; }
+
+/* ── CURSOR ── */
+.cd,.cr { position:fixed; pointer-events:none; z-index:99999; border-radius:50%; transform:translate(-50%,-50%); }
+.cd { width:5px; height:5px; background:var(--gold); transition:transform .08s, background .3s; }
+.cr { width:34px; height:34px; border:1px solid var(--gold); opacity:.35; transition:all .3s cubic-bezier(.23,1,.32,1); }
+.cr.a { width:56px; height:56px; opacity:.6; border-color:var(--rust); }
+.cr.view { width:80px; height:80px; opacity:.8; }
+.cr.view::after { content:'VIEW'; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:var(--mon); font-size:.45rem; letter-spacing:.15em; color:var(--gold); }
+@media(max-width:768px){.cd,.cr{display:none}body{cursor:auto}}
+
+/* ── PRELOADER ── */
+#pl { position:fixed; inset:0; background:var(--bg); z-index:100000; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:20px; transition:opacity 1s ease; }
+.pl-w { font-family:var(--dsp); font-size:clamp(1.3rem,3.5vw,2rem); font-weight:500; letter-spacing:.14em; color:var(--tx); text-transform:uppercase; opacity:0; animation:fi .5s .2s ease forwards; }
+.pl-s { font-family:var(--mon); font-size:.55rem; letter-spacing:.3em; text-transform:uppercase; color:var(--tx3); opacity:0; animation:fi .5s .5s ease forwards; }
+.pl-bt { width:100px; height:1px; background:var(--brd); overflow:hidden; opacity:0; animation:fi .4s .7s ease forwards; }
+.pl-bf { height:100%; width:0; background:var(--gold); animation:pb 1s .9s ease forwards; }
+@keyframes fi { to { opacity:1 } }
+@keyframes pb { to { width:100% } }
+
+/* ── NAV ── */
+nav { position:fixed; top:0; left:0; right:0; z-index:1000; padding:22px 48px; display:flex; align-items:center; justify-content:space-between; transition:all .5s; }
+nav.sc { background:rgba(5,6,8,.94); backdrop-filter:blur(20px) saturate(1.6); padding:16px 48px; border-bottom:1px solid var(--brd); }
+.nb { display:flex; flex-direction:column; gap:1px; text-decoration:none; }
+.nb-n { font-family:var(--dsp); font-size:1.1rem; font-weight:500; letter-spacing:.1em; color:var(--tx); text-transform:uppercase; }
+.nb-s { font-family:var(--mon); font-size:.5rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); }
+.nl { display:flex; align-items:center; gap:30px; list-style:none; }
+.nl a { font-family:var(--mon); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:var(--tx2); text-decoration:none; transition:color .25s; position:relative; }
+.nl a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:1px; background:var(--gold); transition:width .3s; }
+.nl a:hover { color:var(--tx); }
+.nl a:hover::after { width:100%; }
+.nc { padding:9px 22px !important; border:1px solid var(--gold) !important; color:var(--gold) !important; transition:all .25s !important; }
+.nc::after { display:none !important; }
+.nc:hover { background:var(--gold) !important; color:var(--bg) !important; }
+.hb { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:4px; z-index:1001; }
+.hb span { display:block; width:24px; height:1px; background:var(--tx); transition:all .3s; }
+.hb.o span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+.hb.o span:nth-child(2) { opacity:0; }
+.hb.o span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+.mn { position:fixed; inset:0; background:var(--bg-deep); z-index:999; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:28px; opacity:0; pointer-events:none; transition:all .5s cubic-bezier(.23,1,.32,1); clip-path:circle(0 at 90% 50px); }
+.mn.o { opacity:1; pointer-events:all; clip-path:circle(150% at 90% 50px); }
+.mn a { font-family:var(--dsp); font-size:clamp(2.2rem,8vw,3.5rem); font-weight:300; color:var(--tx); text-decoration:none; transform:translateY(20px); opacity:0; transition:transform .4s cubic-bezier(.23,1,.32,1), color .2s; }
+.mn.o a { transform:none; opacity:1; }
+.mn.o a:nth-child(1){transition-delay:.1s}
+.mn.o a:nth-child(2){transition-delay:.15s}
+.mn.o a:nth-child(3){transition-delay:.2s}
+.mn.o a:nth-child(4){transition-delay:.25s}
+.mn.o a:nth-child(5){transition-delay:.3s}
+.mn a:hover { color:var(--gold); }
+.mn .mc { margin-top:24px; padding:15px 42px; border:1px solid var(--gold); color:var(--gold)!important; font-family:var(--mon)!important; font-size:.65rem!important; letter-spacing:.18em!important; text-transform:uppercase; transition-delay:.4s; }
+@media(max-width:1024px){.nl{gap:18px}.nl a{font-size:.58rem}}
+@media(max-width:768px){nav{padding:18px 24px}nav.sc{padding:14px 24px}.nl{display:none}.hb{display:flex}}
+
+
+/* ═══════════════════════════════════════════
+   HERO — Fully typographic. No portrait.
+   The type IS the composition. Trust it.
+   ═══════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0 60px;
+  background: var(--bg-deep);
+}
+.hero-atmo {
+  position: absolute; inset: 0;
+  background: url('assets/courtroom-noir.png') center/cover no-repeat;
+  opacity: 0.07;
+  filter: grayscale(80%) contrast(1.3);
+  pointer-events: none;
+}
+.hero-atmo::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom, var(--bg-deep) 0%, transparent 25%, transparent 75%, var(--bg-deep) 100%),
+    radial-gradient(ellipse 80% 70% at 50% 50%, transparent 30%, var(--bg-deep) 80%);
+}
+.hero-eye {
+  padding: 0 64px;
+  margin-bottom: 32px;
+  display: flex; align-items: center; gap: 14px;
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .6s .5s ease forwards;
+}
+.hero-eye-l { width: 28px; height: 1px; background: var(--gold); }
+.hero-eye-t { font-family: var(--mon); font-size: .58rem; letter-spacing: .25em; text-transform: uppercase; color: var(--gold); }
+
+/* The headline fills the viewport. Tight tracking. Intentional kerning. */
+.hero-hl {
+  padding: 0 56px;
+  position: relative;
+  z-index: 2;
+}
+.hero-h {
+  font-family: var(--dsp);
+  font-size: clamp(3rem, 11vw, 13rem);
+  font-weight: 900;
+  line-height: 0.87;
+  letter-spacing: -0.035em;
+  color: var(--tx);
+  font-feature-settings: 'liga' 1, 'calt' 1, 'ss01' 1;
+}
+.hw { display: inline-block; overflow: hidden; vertical-align: bottom; }
+.hwi { display: inline-block; transform: translateY(115%); animation: hwu .6s ease forwards; }
+/* TRIAL. — oxblood, with a considered period */
+.ht { color: var(--rust); position: relative; }
+
+/* "Andrew Does." — not a whisper. A counterpoint with weight. */
+.hero-ad {
+  padding: 0 56px;
+  margin-top: clamp(16px, 3vw, 36px);
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .7s 1.3s ease forwards;
+}
+.hero-ad-text {
+  font-family: var(--dsp);
+  font-size: clamp(1.6rem, 4.5vw, 4.5rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--gold-lt);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+/* Horizontal rule — separates headline from body */
+.hero-rule {
+  margin: clamp(24px, 3vw, 40px) 56px 0;
+  width: 80px; height: 1px;
+  background: var(--rust);
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .5s 1.5s ease forwards;
+}
+
+.hero-body {
+  padding: 0 56px;
+  margin-top: 24px;
+  max-width: 680px;
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .6s 1.6s ease forwards;
+}
+.hero-body p { font-family:var(--ser); font-size:clamp(.92rem,1.2vw,1.08rem); color:var(--tx2); line-height:1.8; font-weight:300; }
+.hero-body strong { color:var(--tx); font-weight:500; }
+.hero-act {
+  padding: 0 56px;
+  margin-top: 32px;
+  display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .6s 1.8s ease forwards;
+}
+.bp { padding:15px 38px; background:var(--gold); color:var(--bg); font-family:var(--mon); font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; font-weight:700; transition:all .3s; display:inline-block; position:relative; }
+.bp::before { content:''; position:absolute; inset:3px; border:1px solid rgba(255,255,255,.12); pointer-events:none; }
+.bp:hover { background:var(--gold-lt); transform:translateY(-2px); box-shadow:0 8px 28px rgba(184,148,90,.25); }
+.bs { padding:15px 38px; border:1px solid rgba(255,255,255,.12); color:var(--tx2); font-family:var(--mon); font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; transition:all .3s; }
+.bs:hover { border-color:var(--gold); color:var(--gold); }
+
+/* Trust stats — horizontal, subtle */
+.hero-tr {
+  padding: 0 56px;
+  margin-top: 44px;
+  display: flex; gap: 44px; align-items: center;
+  position: relative; z-index: 2;
+  opacity: 0; animation: hfu .6s 2s ease forwards;
+  padding-top: 24px;
+  border-top: 1px solid var(--brd);
+}
+.tri { display:flex; flex-direction:column; gap:3px; }
+.trn { font-family:var(--dsp); font-size:1.7rem; font-weight:700; color:var(--gold); line-height:1; }
+.trl { font-family:var(--mon); font-size:.5rem; letter-spacing:.14em; text-transform:uppercase; color:var(--tx3); line-height:1.5; }
+
+.hero-sc {
+  position: absolute; bottom: 28px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  z-index: 2;
+  opacity: 0; animation: hfu .5s 2.3s ease forwards;
+}
+.hero-sc span { font-family:var(--mon); font-size:.45rem; letter-spacing:.3em; text-transform:uppercase; color:var(--tx3); }
+.hero-sc-l { width:1px; height:40px; background:linear-gradient(to bottom,var(--gold),transparent); animation:sp 2.5s ease infinite; }
+@keyframes sp { 0%,100%{opacity:.2} 50%{opacity:1} }
+@keyframes hwu { to { transform:translateY(0) } }
+@keyframes hfu { from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none} }
+
+@media(max-width:1024px){
+  .hero-hl,.hero-eye,.hero-ad,.hero-body,.hero-act,.hero-tr,.hero-rule{padding-left:32px;padding-right:32px}
+}
+@media(max-width:768px){
+  #hero{padding:110px 0 80px}
+  .hero-hl,.hero-eye,.hero-ad,.hero-body,.hero-act,.hero-tr,.hero-rule{padding-left:24px;padding-right:24px}
+  .hero-h{font-size:clamp(2.5rem,11.5vw,4.5rem)} /* Reduced to ensure 'Most Lawyers' fits on one line */
+  .hero-ad{margin-top:24px}
+  .hero-ad-text{font-size:clamp(1.6rem,7.5vw,2.2rem)}
+  .hero-tr{gap:28px;flex-direction:column;align-items:flex-start;border-top:none;padding-top:0;}
+  .tri{flex-direction:row;align-items:center;gap:14px;border-top:1px solid var(--brd);width:100%;padding-top:16px;}
+  .trl{white-space:nowrap}
+}
+
+
+/* ═══════════════════════════════════════════
+   WHY — Not three identical columns.
+   Numbered vertical sequence with editorial split.
+   ═══════════════════════════════════════════ */
+#why {
+  padding: 120px 48px;
+  background: var(--bg-alt);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--br);
+}
+/* Massive background number */
+.why-bgn { position:absolute; right:-3%; top:50%; transform:translateY(-50%); font-family:var(--dsp); font-size:clamp(10rem,28vw,30rem); font-weight:900; color:rgba(184,148,90,.03); line-height:1; pointer-events:none; user-select:none; }
+.why-i { max-width:1100px; margin:0 auto; position:relative; z-index:1; }
+.st { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+.stc { justify-content:center; }
+.stl { width:24px; height:1px; background:var(--gold); }
+.stt { font-family:var(--mon); font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+.sct { font-family:var(--dsp); font-size:clamp(1.9rem,4vw,3.4rem); font-weight:300; line-height:1.1; color:var(--tx); margin-top:6px; }
+.eb { font-weight:700; }
+
+.why-hd { text-align:center; margin-bottom:52px; }
+.why-sub { font-family:var(--ser); font-size:1rem; color:var(--tx2); line-height:1.75; max-width:600px; margin:18px auto 0; font-weight:300; }
+
+/* Stat hero */
+.why-sh { text-align:center; padding:40px 28px; margin-bottom:40px; border:1px solid var(--br); background:var(--bg-deep); position:relative; }
+.why-sh::before,.why-sh::after { content:''; position:absolute; width:32px; height:32px; border:1px solid var(--gold); }
+.why-sh::before { top:-1px;left:-1px;border-right:none;border-bottom:none; }
+.why-sh::after { bottom:-1px;right:-1px;border-left:none;border-top:none; }
+.wsn { font-family:var(--dsp); font-size:clamp(3rem,7vw,6rem); font-weight:900; color:var(--gold); line-height:1; margin-bottom:8px; }
+.wsl { font-family:var(--ser); font-size:1.1rem; font-style:italic; color:var(--tx); font-weight:300; margin-bottom:5px; }
+.wsc { font-family:var(--mon); font-size:.55rem; color:var(--tx3); letter-spacing:.12em; text-transform:uppercase; }
+
+/* Vertical numbered sequence instead of three-up */
+.why-pts { display:flex; flex-direction:column; gap:0; border:1px solid var(--brd); }
+.why-pt {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  padding: 32px 28px;
+  border-bottom: 1px solid var(--brd);
+  align-items: start;
+  transition: background .3s;
+}
+.why-pt:last-child { border-bottom: none; }
+.why-pt:hover { background: rgba(184,148,90,.02); }
+.why-pt-num {
+  font-family: var(--dsp);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--gold-dk);
+  line-height: 1;
+  padding-top: 4px;
+}
+.why-pt-body {}
+.wpt { font-family:var(--dsp); font-size:1.2rem; font-weight:500; color:var(--tx); margin-bottom:8px; }
+.wpd { font-family:var(--ser); font-size:.88rem; color:var(--tx2); line-height:1.8; font-weight:300; }
+
+@media(max-width:900px){
+  #why{padding:80px 24px}
+  .why-bgn{display:none}
+  .why-sh{padding:32px 20px;}
+  .wsn{font-size:3.5rem;}
+  .why-pts{gap:12px;border:none;background:transparent;}
+  .why-pt{grid-template-columns:1fr;gap:12px;padding:32px 24px;background:var(--card);border:1px solid var(--brd);}
+  .why-pt:last-child{border-bottom:1px solid var(--brd)}
+  .why-pt-num{font-size:1.6rem;padding-top:0;display:inline-block;padding-bottom:12px;border-bottom:1px solid var(--gold);color:var(--gold);}
+}
+
+
+/* ═══════════════════════════════════════════
+   RESULTS — Real hierarchy. Not flat cards.
+   Murder acquittal & $4.5M = hero-sized.
+   ═══════════════════════════════════════════ */
+#results { padding:120px 48px; max-width:1260px; margin:0 auto; }
+.rh { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:52px; gap:40px; }
+.rd { max-width:340px; font-family:var(--ser); font-size:.72rem; font-style:italic; color:var(--tx3); line-height:1.6; }
+
+/* Hero-sized featured results */
+.res-heroes {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+.res-hero {
+  padding: 52px 40px;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+  transition: background .3s;
+}
+.res-hero:hover { background: var(--card-h); }
+.res-hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0;
+  width: 0; height: 4px;
+  transition: width .5s ease;
+}
+.res-hero:hover::before { width: 100%; }
+.res-hero.rust::before { background: var(--rust); }
+.res-hero.gold::before { background: var(--gold); }
+.rt { font-family:var(--mon); font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+.ra { font-family:var(--dsp); font-weight:700; color:var(--tx); line-height:1; margin-bottom:16px; }
+.ra-lg { font-size:clamp(2.4rem,4vw,3.8rem); }
+.ra-v { color:var(--rust-lt); font-style:italic; font-weight:500; }
+.rdesc { font-family:var(--ser); font-size:.92rem; color:var(--tx2); line-height:1.7; font-weight:300; max-width:440px; }
+
+/* Secondary results — compact grid */
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.res-card {
+  padding: 28px 24px;
+  background: var(--card);
+  transition: background .3s;
+  position: relative;
+}
+.res-card:hover { background: var(--card-h); }
+.res-card::before { content:''; position:absolute; top:0; left:0; width:2px; height:0; transition:height .4s; }
+.res-card:hover::before { height:100%; }
+.res-card.rust::before { background:var(--rust); }
+.res-card.gold::before { background:var(--gold); }
+.ra-sm { font-family:var(--dsp); font-size:1.5rem; font-weight:700; color:var(--tx); line-height:1; margin-bottom:10px; }
+.ra-sm.v { color:var(--rust-lt); font-weight:500; font-style:italic; font-size:1.3rem; }
+.rdesc-sm { font-family:var(--ser); font-size:.82rem; color:var(--tx2); line-height:1.65; font-weight:300; }
+
+@media(max-width:900px){
+  #results{padding:80px 24px}
+  .rh{flex-direction:column;align-items:flex-start;margin-bottom:32px;}
+  .res-heroes{grid-template-columns:1fr;gap:16px;margin-bottom:16px;}
+  .res-hero{padding:40px 28px;}
+  .ra-lg{font-size:2.4rem;}
+  .res-grid{grid-template-columns:1fr;gap:8px;}
+  .res-card{padding:24px 20px;}
+}
+
+
+/* ═══════════════════════════════════════════
+   STORY — THE BREAK.
+   Transition: thick oxblood rule at seam.
+   Courthouse engraving as texture, not dropped rectangle.
+   ═══════════════════════════════════════════ */
+/* Oxblood transition rule — intentional, impossible to miss */
+.story-seam {
+  height: 6px;
+  background: var(--rust);
+  position: relative;
+  z-index: 5;
+}
+#story {
+  padding: 100px 0 0;
+  background: var(--chalk);
+  color: var(--txd);
+  position: relative;
+  overflow: hidden;
+}
+/* Courthouse engraving as background TEXTURE — not a dropped image */
+#story::before {
+  content: '';
+  position: absolute;
+  right: -5%; top: 50%;
+  transform: translateY(-50%);
+  width: 55%;
+  height: 80%;
+  background: url('assets/courthouse-engraving.png') center/contain no-repeat;
+  opacity: 0.04;
+  filter: grayscale(100%);
+  pointer-events: none;
+}
+.sty-i { max-width:1100px; margin:0 auto; padding:0 48px; }
+.sty-g {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 48px;
+  align-items: start;
+}
+/* Quote — rust border, not gold */
+.sty-q {
+  padding: 28px 24px;
+  border-left: 4px solid var(--rust);
+  background: rgba(26,24,20,.03);
+  margin-right: -48px;
+  position: relative; z-index: 2;
+}
+.sqL { font-family:var(--mon); font-size:.5rem; letter-spacing:.22em; text-transform:uppercase; color:var(--rust); margin-bottom:12px; }
+.sqT { font-family:var(--ser); font-size:clamp(.95rem,1.6vw,1.2rem); font-style:italic; color:var(--txd); line-height:1.7; font-weight:400; }
+.sqA { margin-top:14px; font-family:var(--mon); font-size:.55rem; letter-spacing:.14em; text-transform:uppercase; color:var(--txd3); }
+/* Credentials */
+.sty-m { margin-top:24px; border:1px solid var(--brw); }
+.mr { display:grid; grid-template-columns:80px 1fr; padding:11px 16px; gap:10px; border-bottom:1px solid var(--brw); align-items:start; }
+.mr:last-child{border-bottom:none}
+.mrl { font-family:var(--mon); font-size:.5rem; letter-spacing:.16em; text-transform:uppercase; color:var(--txd3); padding-top:2px; }
+.mrv { font-family:var(--ser); font-size:.82rem; color:var(--txd2); line-height:1.5; }
+/* Right column */
+.sty-c { padding-left:16px; }
+.stt-d { font-family:var(--dsp); font-size:clamp(1.9rem,3.5vw,3.2rem); font-weight:300; line-height:1.1; color:var(--txd); margin-bottom:28px; }
+.eri { font-style:italic; color:var(--rust); }
+.sp { font-family:var(--ser); font-size:.92rem; color:var(--txd2); line-height:1.9; font-weight:300; margin-bottom:16px; }
+.sp strong { color:var(--txd); font-weight:500; }
+.sdv { width:32px; height:1px; background:var(--rust); margin:28px 0; }
+
+/* Full-bleed duotone photo — ties landscape to oxblood */
+.sty-ph {
+  margin-top: 80px;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  height: 44vh;
+  min-height: 260px;
+  overflow: hidden;
+}
+.sty-ph img { width:100%; height:100%; object-fit:cover; object-position:center 40%; }
+.sty-ph::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to right, var(--chalk) 0%, transparent 12%, transparent 88%, var(--chalk) 100%),
+    linear-gradient(to bottom, var(--chalk) 0%, transparent 20%, transparent 85%, transparent 100%);
+}
+.sty-ph-cap { position:absolute; bottom:20px; right:56px; font-family:var(--mon); font-size:.5rem; letter-spacing:.18em; text-transform:uppercase; color:var(--txd3); z-index:2; }
+/* Bottom seam back to dark */
+.story-seam-bot { height:6px; background:var(--rust); }
+
+@media(max-width:900px){
+  .sty-i{padding:0 24px}
+  .sty-g{grid-template-columns:1fr;gap:36px}
+  .sty-q{margin-right:0}
+  .sty-c{padding-left:0}
+  .sty-ph{height:35vh;min-height:200px}
+  .sty-ph-cap{right:24px;bottom:14px}
+}
+
+
+/* ═══════════════════════════════════════════
+   PRACTICE — Horizontal scroll, ghost numbers
+   ═══════════════════════════════════════════ */
+#prac { padding:120px 0; overflow:hidden; }
+.prac-hd { padding:0 48px; margin-bottom:52px; display:flex; align-items:flex-end; justify-content:space-between; gap:40px; max-width:1400px; margin-left:auto; margin-right:auto; }
+.prac-hl { max-width:600px; }
+.eu { text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:6px; text-decoration-thickness:1px; }
+.prac-hr { max-width:300px; font-family:var(--ser); font-size:.88rem; color:var(--tx2); line-height:1.7; font-weight:300; }
+.prac-tk { display:flex; gap:2px; padding:0 48px; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x mandatory; cursor:grab; }
+.prac-tk:active{cursor:grabbing}
+.prac-tk::-webkit-scrollbar{display:none}
+.pc { flex:0 0 300px; scroll-snap-align:start; padding:32px 24px; background:var(--card); border:1px solid var(--brd); transition:all .4s cubic-bezier(.23,1,.32,1); position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.pc.f { background:rgba(184,148,90,.03); border-color:var(--br); }
+.pc::before { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .4s; }
+.pc:hover { background:var(--card-h); border-color:var(--br); transform:translateY(-3px); }
+.pc:hover::before { transform:scaleX(1); }
+.pc-gn { position:absolute; top:-8px; right:-4px; font-family:var(--dsp); font-size:6.5rem; font-weight:900; color:rgba(255,255,255,.015); line-height:1; pointer-events:none; transition:color .3s; }
+.pc:hover .pc-gn{color:rgba(184,148,90,.04)}
+.pc-fb { display:inline-flex; align-items:center; gap:5px; font-family:var(--mon); font-size:.48rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.pc-fb::before { content:''; width:4px; height:4px; background:var(--gold); transform:rotate(45deg); }
+.pcn { font-family:var(--dsp); font-size:1.8rem; font-weight:700; color:var(--brd); line-height:1; margin-bottom:16px; transition:color .3s; }
+.pc.f .pcn,.pc:hover .pcn{color:var(--gold-dk)}
+.pcnm { font-family:var(--dsp); font-size:1.2rem; font-weight:500; color:var(--tx); margin-bottom:10px; line-height:1.2; }
+.pcd { font-family:var(--ser); font-size:.82rem; color:var(--tx2); line-height:1.8; font-weight:300; flex-grow:1; }
+.pcc { margin-top:14px; display:inline-flex; padding:4px 10px; border:1px solid var(--br); font-family:var(--mon); font-size:.48rem; letter-spacing:.1em; color:var(--gold); text-transform:uppercase; align-self:flex-start; }
+@media(max-width:900px){
+  .prac-hd{flex-direction:column;align-items:flex-start;padding:0 24px}
+  .prac-tk{padding:0 24px}
+  .pc{flex:0 0 265px;padding:28px 20px}
+  #prac{padding:80px 0}
+}
+
+
+/* ═══════════════════════════════════════════
+   SERVICE — Map simplified. Text-led.
+   ═══════════════════════════════════════════ */
+#svc { padding:120px 48px; background:var(--bg-alt); border-top:1px solid var(--brd); }
+.svc-i { max-width:1200px; margin:0 auto; }
+.svc-g { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; }
+.svt { font-family:var(--ser); font-size:.92rem; color:var(--tx2); line-height:1.85; font-weight:300; margin-bottom:18px; }
+.svc-cw { margin-top:24px; }
+.svc-cl { font-family:var(--mon); font-size:.5rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.svc-cs { display:grid; grid-template-columns:repeat(3,1fr); gap:0; }
+.cty { font-family:var(--ser); font-size:.78rem; color:var(--tx3); padding:7px 0; border-top:1px solid var(--brd); transition:color .2s; }
+.cty:hover{color:var(--gold)}
+
+/* Map — cleaner, more intentional */
+.map-w { padding:28px; border:1px solid var(--br); background:var(--bg-deep); position:relative; overflow:hidden; }
+.map-w::before { content:''; position:absolute; inset:0; background:linear-gradient(rgba(184,148,90,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(184,148,90,.03) 1px,transparent 1px); background-size:24px 24px; }
+.map-s { position:relative; z-index:1; width:100%; display:block; }
+.mo-o { stroke-dasharray:2000; stroke-dashoffset:2000; transition:stroke-dashoffset 3s ease; }
+.map-s.dr .mo-o { stroke-dashoffset:0; }
+.cr-r { fill:rgba(184,148,90,.03); stroke:rgba(184,148,90,.12); stroke-width:.5; transition:all .3s; cursor:pointer; }
+.cr-r:hover { fill:rgba(184,148,90,.1); stroke:var(--gold); }
+.kp { fill:var(--rust); }
+.kpp { fill:var(--rust); animation:mp 2s ease infinite; }
+@keyframes mp { 0%{opacity:.6;r:5} 50%{opacity:0;r:16} 100%{opacity:0;r:16} }
+.mlt { font-family:var(--mon); font-size:5px; letter-spacing:.12em; text-transform:uppercase; fill:var(--gold); }
+.mlb { position:absolute; background:var(--bg-deep); padding:5px 10px; border:1px solid var(--gold); font-family:var(--mon); font-size:.5rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); white-space:nowrap; z-index:2; }
+@media(max-width:900px){
+  #svc{padding:80px 24px}
+  .svc-g{grid-template-columns:1fr;gap:40px}
+  .svc-cs{grid-template-columns:repeat(2,1fr)}
+}
+
+
+/* ═══════════════════════════════════════════
+   PROCESS — Compact
+   ═══════════════════════════════════════════ */
+#proc { padding:100px 48px; }
+.proc-i { max-width:1000px; margin:0 auto; }
+.proc-h { text-align:center; margin-bottom:56px; }
+.proc-s { display:grid; grid-template-columns:repeat(3,1fr); position:relative; }
+.proc-s::before { content:''; position:absolute; top:31px; left:16.67%; right:16.67%; height:1px; background:linear-gradient(to right,transparent,var(--br),transparent); }
+.ps { padding:0 24px; text-align:center; }
+.psn { width:62px; height:62px; border:1px solid var(--br); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; font-family:var(--dsp); font-size:1.3rem; font-weight:700; color:var(--gold); background:var(--bg); position:relative; z-index:1; transition:all .3s; }
+.ps:hover .psn { background:rgba(184,148,90,.08); border-color:var(--gold); }
+.psnn { font-family:var(--dsp); font-size:1.1rem; font-weight:500; color:var(--tx); margin-bottom:8px; }
+.psd { font-family:var(--ser); font-size:.82rem; color:var(--tx2); line-height:1.8; font-weight:300; }
+@media(max-width:768px){
+  #proc{padding:72px 24px}
+  .proc-s{grid-template-columns:1fr;gap:32px}
+  .proc-s::before{display:none}
+}
+
+
+/* ═══════════════════════════════════════════
+   TESTIMONIALS
+   ═══════════════════════════════════════════ */
+#test { padding:120px 48px; background:var(--bg-alt); border-top:1px solid var(--brd); border-bottom:1px solid var(--brd); }
+.test-i { max-width:1100px; margin:0 auto; }
+.test-h { margin-bottom:52px; text-align:center; }
+.test-g { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; }
+.tc { background:var(--card); padding:32px 24px; border:1px solid var(--brd); position:relative; }
+.tc::before { content:''; position:absolute; top:0; left:24px; width:1px; height:20px; background:var(--gold); }
+.tcs { display:flex; gap:2px; margin-bottom:14px; color:var(--gold); font-size:.7rem; }
+.tct { font-family:var(--ser); font-size:.98rem; font-style:italic; color:var(--tx); line-height:1.7; font-weight:300; margin-bottom:20px; }
+.tcn { font-size:.82rem; color:var(--tx); font-weight:400; margin-bottom:2px; }
+.tcc { font-family:var(--mon); font-size:.48rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); }
+@media(max-width:900px){.test-g{grid-template-columns:1fr}#test{padding:80px 24px}}
+
+
+/* ═══════════════════════════════════════════
+   FAQ — Numbered, branded
+   ═══════════════════════════════════════════ */
+#faq { padding:120px 48px; }
+.faq-i { max-width:880px; margin:0 auto; }
+.faq-h { text-align:center; margin-bottom:48px; }
+.fl { display:flex; flex-direction:column; }
+.fi { border-bottom:1px solid var(--brd); }
+.fi:first-child { border-top:1px solid var(--brd); }
+.fq { width:100%; padding:20px 0; background:none; border:none; color:var(--tx); text-align:left; cursor:pointer; display:flex; align-items:center; gap:16px; transition:color .25s; }
+.fq:hover { color:var(--gold-lt); }
+.fqn { font-family:var(--dsp); font-size:1rem; font-weight:700; color:var(--gold-dk); min-width:26px; flex-shrink:0; }
+.fqt { font-family:var(--dsp); font-size:1.05rem; font-weight:400; flex-grow:1; line-height:1.3; }
+.fic { width:16px; height:16px; position:relative; flex-shrink:0; }
+.fic::before,.fic::after { content:''; position:absolute; background:var(--gold); transition:transform .3s; }
+.fic::before { top:50%; left:2px; right:2px; height:1px; }
+.fic::after { left:50%; top:2px; bottom:2px; width:1px; }
+.fi.op .fic::after { transform:rotate(90deg); }
+.fa { max-height:0; overflow:hidden; transition:max-height .45s ease,padding .3s; }
+.fi.op .fa { max-height:500px; padding-bottom:20px; }
+.fai { padding-left:42px; border-left:2px solid var(--gold-dk); margin-left:12px; }
+.fai p { font-family:var(--ser); font-size:.9rem; color:var(--tx2); line-height:1.85; font-weight:300; padding-left:18px; }
+@media(max-width:768px){#faq{padding:80px 24px}.fqt{font-size:.95rem}}
+
+
+/* ═══════════════════════════════════════════
+   CTA — Heavy
+   ═══════════════════════════════════════════ */
+#cta { padding:120px 48px; background:var(--bg-deep); text-align:center; position:relative; overflow:hidden; border-top:1px solid var(--br); }
+#cta::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(184,148,90,.04) 0%,transparent 70%); }
+.cta-t { font-family:var(--dsp); font-size:clamp(2.2rem,5.5vw,4.5rem); font-weight:300; line-height:1.1; margin-bottom:22px; position:relative; }
+.es { font-size:1.15em; font-style:italic; color:var(--gold-lt); }
+.cta-s { font-family:var(--ser); font-size:1rem; color:var(--tx2); line-height:1.75; max-width:540px; margin:0 auto 40px; font-weight:300; position:relative; }
+.cta-a { display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap; position:relative; }
+.cta-ph { font-family:var(--dsp); font-size:1.4rem; font-weight:300; color:var(--tx2); text-decoration:none; transition:color .25s; }
+.cta-ph:hover{color:var(--gold)}
+@media(max-width:768px){#cta{padding:80px 24px}}
+
+
+/* ═══════════════════════════════════════════
+   CONTACT — Editorial form
+   ═══════════════════════════════════════════ */
+#contact { padding:120px 48px; max-width:1200px; margin:0 auto; }
+.cg { display:grid; grid-template-columns:1fr 340px; gap:72px; }
+.cft { font-family:var(--dsp); font-size:clamp(1.7rem,2.8vw,2.6rem); font-weight:300; margin-bottom:6px; line-height:1.2; }
+.cfs { font-family:var(--ser); font-size:.88rem; color:var(--tx2); margin-bottom:36px; font-weight:300; line-height:1.6; }
+.fr { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.fg { margin-bottom:24px; }
+.fg label { display:block; font-family:var(--mon); font-size:.5rem; letter-spacing:.18em; text-transform:uppercase; color:var(--tx3); margin-bottom:8px; }
+.fg input,.fg textarea,.fg select { width:100%; background:transparent; border:none; border-bottom:1px solid var(--brd); color:var(--tx); padding:10px 0; font-family:var(--ser); font-size:.92rem; font-weight:300; outline:none; transition:border-color .3s; border-radius:0; appearance:none; }
+.fg input:focus,.fg textarea:focus,.fg select:focus { border-bottom-color:var(--gold); }
+.fg input::placeholder,.fg textarea::placeholder { color:var(--tx3); font-style:italic; }
+.fg textarea { min-height:90px; resize:vertical; border:1px solid var(--brd); padding:12px; background:var(--card); }
+.fg textarea:focus{border-color:var(--gold)}
+.fg select { cursor:pointer; }
+.fg select option { background:var(--bg); color:var(--tx); }
+.fsb { width:100%; padding:15px; background:var(--gold); color:var(--bg); border:none; font-family:var(--mon); font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; font-weight:700; cursor:pointer; transition:all .3s; margin-top:6px; position:relative; }
+.fsb::before { content:''; position:absolute; inset:3px; border:1px solid rgba(255,255,255,.12); pointer-events:none; }
+.fsb:hover { background:var(--gold-lt); transform:translateY(-1px); box-shadow:0 6px 20px rgba(184,148,90,.22); }
+.ci { padding-top:52px; }
+.ib { margin-bottom:28px; }
+.il { font-family:var(--mon); font-size:.5rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+.iv { font-family:var(--ser); font-size:.88rem; color:var(--tx2); line-height:1.6; font-weight:300; }
+.iv a { color:var(--tx); text-decoration:none; transition:color .2s; }
+.iv a:hover { color:var(--gold); }
+.idv { width:20px; height:1px; background:var(--br); margin-bottom:28px; }
+.disc { padding:18px; border:1px solid var(--brd); background:var(--bg-alt); position:relative; }
+.disc::before { content:'⚖'; position:absolute; top:-7px; left:14px; font-size:.65rem; background:var(--bg-alt); padding:0 5px; color:var(--tx3); }
+.disc p { font-family:var(--ser); font-size:.68rem; color:var(--tx3); line-height:1.7; font-style:italic; }
+@media(max-width:900px){
+  .cg{grid-template-columns:1fr;gap:48px}
+  #contact{padding:80px 24px}
+  .fr{grid-template-columns:1fr;gap:0}
+  .ci{padding-top:0}
+}
+
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48px 48px 32px; }
+.fm { text-align:center; margin-bottom:32px; }
+.fm svg { width:24px; height:24px; opacity:.25; }
+.ft-i { max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr auto 1fr; gap:36px; align-items:start; margin-bottom:36px; }
+.ft-bn { font-family:var(--dsp); font-size:1rem; font-weight:500; letter-spacing:.08em; color:var(--tx); text-transform:uppercase; margin-bottom:3px; }
+.ft-tl { font-family:var(--mon); font-size:.48rem; letter-spacing:.16em; text-transform:uppercase; color:var(--tx3); }
+.ft-lk { display:flex; flex-direction:column; gap:7px; list-style:none; text-align:center; }
+.ft-lk a { font-family:var(--mon); font-size:.55rem; letter-spacing:.1em; color:var(--tx3); text-decoration:none; transition:color .2s; text-transform:uppercase; }
+.ft-lk a:hover { color:var(--gold); }
+.ft-ct { text-align:right; }
+.ft-ct a { display:block; font-family:var(--ser); font-size:.82rem; color:var(--tx2); text-decoration:none; margin-bottom:4px; transition:color .2s; }
+.ft-ct a:hover { color:var(--gold); }
+.ft-b { max-width:1000px; margin:0 auto; padding-top:18px; border-top:1px solid var(--brd); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.ft-cp { font-family:var(--mon); font-size:.5rem; letter-spacing:.1em; color:var(--tx3); }
+.ft-lg { font-family:var(--ser); font-size:.65rem; color:var(--tx3); font-style:italic; max-width:460px; text-align:right; line-height:1.5; }
+@media(max-width:768px){
+  footer{padding:36px 24px 24px}
+  .ft-i{grid-template-columns:1fr;text-align:left}
+  .ft-lk{text-align:left}
+  .ft-ct{text-align:left}
+  .ft-b{flex-direction:column;align-items:flex-start;gap:16px;padding-bottom:70px}
+  .ft-lg{text-align:left}
+}
+
+/* ── MOBILE BAR ── */
+.mb { display:none; position:fixed; bottom:0; left:0; right:0; z-index:990; grid-template-columns:1fr 1fr; background:var(--bg-deep); border-top:1px solid var(--br); }
+.mb a { padding:20px 15px; text-align:center; font-family:var(--mon); font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; font-weight:700; transition:background .2s; }
+.mbc { background:var(--gold); color:var(--bg); }
+.mbc:hover { background:var(--gold-lt); }
+.mbf { background:var(--bg-alt); color:var(--tx2); border-left:1px solid var(--br); }
+.mbf:hover { background:var(--card); color:var(--tx); }
+@media(max-width:768px){.mb{display:grid}}
+
+/* ── REVEALS ── */
+.rv { opacity:0; transform:translateY(24px); transition:opacity .75s ease, transform .75s ease; }
+.rv.v { opacity:1; transform:none; }
+.rv1{transition-delay:.1s}.rv2{transition-delay:.2s}.rv3{transition-delay:.3s}
+.rvl { opacity:0; transform:translateX(-30px); transition:opacity .8s ease, transform .8s ease; }
+.rvl.v { opacity:1; transform:none; }
+.rvr { opacity:0; transform:translateX(30px); transition:opacity .8s ease, transform .8s ease; }
+.rvr.v { opacity:1; transform:none; }
+/* Scale reveal for results heroes */
+.rvs { opacity:0; transform:scale(.96); transition:opacity .7s ease, transform .7s ease; }
+.rvs.v { opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<svg class="grain" viewBox="0 0 512 512" preserveAspectRatio="none"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+<div class="spg" id="spg"></div>
+<div class="cd" id="cd"></div>
+<div class="cr" id="cr"></div>
+
+<div id="pl">
+  <div class="pl-w">Farwell</div>
+  <div class="pl-s">Law Firm · Est. 2003</div>
+  <div class="pl-bt"><div class="pl-bf"></div></div>
+</div>
+
+<div class="mn" id="mn">
+  <a href="#why" onclick="cm()">Why Farwell</a>
+  <a href="#results" onclick="cm()">Results</a>
+  <a href="#story" onclick="cm()">About Andrew</a>
+  <a href="#prac" onclick="cm()">Practice Areas</a>
+  <a href="#faq" onclick="cm()">FAQ</a>
+  <a href="#contact" class="mc" onclick="cm()">Free Consultation</a>
+</div>
+
+<nav id="nv">
+  <a href="#" class="nb"><span class="nb-n">Farwell</span><span class="nb-s">Law Firm · Kirksville, MO</span></a>
+  <ul class="nl">
+    <li><a href="#why">Why Farwell</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#story">About</a></li>
+    <li><a href="#prac">Practice</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact" class="nc">Free Consultation</a></li>
+  </ul>
+  <div class="hb" id="hb" onclick="tm()"><span></span><span></span><span></span></div>
+</nav>
+
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-atmo"></div>
+  <div class="hero-eye"><div class="hero-eye-l"></div><span class="hero-eye-t">Trial Attorney · Kirksville, MO · Est. 2003</span></div>
+  <div class="hero-hl">
+    <h1 class="hero-h">
+      <span class="hw"><span class="hwi" style="animation-delay:.5s">Most</span></span>&nbsp;<span class="hw"><span class="hwi" style="animation-delay:.62s">Lawyers</span></span><br>
+      <span class="hw"><span class="hwi" style="animation-delay:.74s">Never</span></span>&nbsp;<span class="hw"><span class="hwi" style="animation-delay:.84s">Go</span></span>&nbsp;<span class="hw"><span class="hwi" style="animation-delay:.94s">to</span></span><br>
+      <span class="hw"><span class="hwi ht" style="animation-delay:1.06s">Trial.</span></span>
+    </h1>
+  </div>
+  <div class="hero-ad"><span class="hero-ad-text">Andrew Does.</span></div>
+  <div class="hero-rule"></div>
+  <div class="hero-body"><p>Over 22 years in practice. <strong>35+ Missouri counties.</strong> Jury trials from misdemeanor to first-degree murder — including a six-week trial in California. When insurance companies lowball and prosecutors overreach, Andrew Farwell is the lawyer who's actually ready to walk into a courtroom.</p></div>
+  <div class="hero-act"><a href="#contact" class="bp">Free Case Review</a><a href="tel:6606652115" class="bs">660.665.2115</a></div>
+  <div class="hero-tr">
+    <div class="tri"><span class="trn" data-count="22">0</span><span class="trl">Years of Trial<br>Experience</span></div>
+    <div class="tri"><span class="trn">35+</span><span class="trl">Missouri Counties<br>Served</span></div>
+    <div class="tri"><span class="trn">A+</span><span class="trl">BBB Accredited<br>Rating</span></div>
+  </div>
+  <div class="hero-sc"><span>Scroll</span><div class="hero-sc-l"></div></div>
+</section>
+
+
+<!-- ═══ WHY ═══ -->
+<section id="why">
+  <div class="why-bgn">35+</div>
+  <div class="why-i">
+    <div class="why-hd rv">
+      <div class="st stc"><div class="stl"></div><span class="stt">The Difference</span><div class="stl"></div></div>
+      <h2 class="sct">A Lawyer Who Is Actually<br><span class="eb">Ready for Trial.</span></h2>
+      <p class="why-sub">Most attorneys have never tried a jury case. Settlements get negotiated from weakness. Plea deals get accepted because the alternative is unthinkable. Andrew Farwell built his practice on the opposite premise.</p>
+    </div>
+    <div class="why-sh rv rv1">
+      <div class="wsn"><span data-count="35">0</span>+</div>
+      <div class="wsl">Missouri counties where Andrew has tried jury cases</div>
+      <div class="wsc">Plus Federal Court &amp; a six-week trial in California</div>
+    </div>
+    <div class="why-pts">
+      <div class="why-pt rv">
+        <div class="why-pt-num">01</div>
+        <div class="why-pt-body"><h3 class="wpt">Trial-Tested</h3><p class="wpd">Every case is prepared as if it will go the distance. That pressure changes how insurance companies negotiate — and how prosecutors charge.</p></div>
+      </div>
+      <div class="why-pt rv rv1">
+        <div class="why-pt-num">02</div>
+        <div class="why-pt-body"><h3 class="wpt">Direct Access</h3><p class="wpd">No intake paralegal, no account manager. When you call Farwell Law, you talk to Andrew. When your case is in motion, Andrew is the one working it.</p></div>
+      </div>
+      <div class="why-pt rv rv2">
+        <div class="why-pt-num">03</div>
+        <div class="why-pt-body"><h3 class="wpt">Rooted Here</h3><p class="wpd">Andrew was born and raised in Kirksville. He knows these courts, these judges, these juries. For 22 years, he's represented his neighbors — and won.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ RESULTS — Murder acquittal & $4.5M = hero treatment ═══ -->
+<section id="results">
+  <div class="rh">
+    <div class="rv"><div class="st"><div class="stl"></div><span class="stt">Case Outcomes</span></div><h2 class="sct">What Going to Trial<br><span style="font-variant:small-caps;letter-spacing:.05em">Actually Gets You.</span></h2></div>
+    <p class="rd rv rv1">Past results do not guarantee similar outcomes. Each case is unique and decided on its specific facts.</p>
+  </div>
+
+  <!-- HERO-SIZED results -->
+  <div class="res-heroes">
+    <div class="res-hero rust rvs">
+      <div class="rt">Criminal Defense</div>
+      <div class="ra ra-lg ra-v">Not Guilty</div>
+      <p class="rdesc">Client acquitted of murder before a jury. The prosecution's case collapsed under cross-examination. This is the outcome that most lawyers never get to deliver — because most lawyers never walk into that courtroom.</p>
+    </div>
+    <div class="res-hero gold rvs rv1">
+      <div class="rt">Class Action</div>
+      <div class="ra ra-lg">$4,500,000</div>
+      <p class="rdesc">Farwell served as local counsel in a multi-million dollar class action settlement — proof that a Kirksville firm can play at any scale.</p>
+    </div>
+  </div>
+
+  <!-- Secondary results -->
+  <div class="res-grid">
+    <div class="res-card gold rv"><div class="rt">Wrongful Death</div><div class="ra-sm">$1,500,000</div><p class="rdesc-sm">Jury judgment under Missouri Statute §537.080.</p></div>
+    <div class="res-card rust rv rv1"><div class="rt">Criminal Defense</div><div class="ra-sm v">Not Guilty</div><p class="rdesc-sm">Acquitted of forcible rape and armed criminal action.</p></div>
+    <div class="res-card gold rv rv2"><div class="rt">Accidental Shooting</div><div class="ra-sm">$750,000</div><p class="rdesc-sm">Jury judgment in a civil firearms negligence claim.</p></div>
+    <div class="res-card rust rv"><div class="rt">Criminal Defense</div><div class="ra-sm v">Not Guilty</div><p class="rdesc-sm">Acquitted of attempting to kill law enforcement.</p></div>
+    <div class="res-card gold rv rv1"><div class="rt">Personal Injury</div><div class="ra-sm">$550,000</div><p class="rdesc-sm">Settlement after an insurer's initial offer fell far short.</p></div>
+    <div class="res-card rust rv rv2"><div class="rt">Criminal Defense</div><div class="ra-sm v">Not Guilty</div><p class="rdesc-sm">Two additional jury acquittals on serious felony charges.</p></div>
+  </div>
+</section>
+
+
+<!-- ═══ STORY — THE BREAK ═══ -->
+<div class="story-seam"></div>
+<section id="story">
+  <div class="sty-i">
+    <div class="sty-g">
+      <div class="rvl">
+        <div class="sty-q">
+          <div class="sqL">In His Own Words</div>
+          <p class="sqT">"Most of the time we represent the underdog — whether that's against insurance companies, or a client presumed guilty before the facts are heard. The satisfaction when your client becomes the victor is something no settlement can replicate."</p>
+          <p class="sqA">— Andrew R. Farwell</p>
+        </div>
+        <div class="sty-m">
+          <div class="mr"><span class="mrl">Education</span><span class="mrv">J.D., University of Missouri–Columbia, 2002<br>B.A. with Honors, University of Arkansas, 1999</span></div>
+          <div class="mr"><span class="mrl">Bar</span><span class="mrv">Missouri State Courts<br>U.S. District Court, E.D. &amp; W.D. Missouri<br>Past President, Adair County Bar Assoc.</span></div>
+          <div class="mr"><span class="mrl">Hometown</span><span class="mrv">Kirksville, Missouri</span></div>
+          <div class="mr"><span class="mrl">Since</span><span class="mrv">December 2003</span></div>
+        </div>
+      </div>
+      <div class="sty-c rvr">
+        <div class="st"><div class="stl" style="background:var(--rust)"></div><span class="stt" style="color:var(--txd3)">About the Attorney</span></div>
+        <h2 class="stt-d">Raised on a Cattle Ranch.<br>Built in the <span class="eri">Courtroom.</span></h2>
+        <p class="sp">Andrew R. Farwell was born and raised near Kirksville, Missouri, on his parents' cattle ranch. He graduated from Kirksville High School and earned his bachelor's degree with honors from the University of Arkansas–Fayetteville, followed by his law degree from the University of Missouri–Columbia in 2002.</p>
+        <p class="sp">In December 2003 — just one year out of law school — he opened his own practice. <strong>He has been there ever since.</strong></p>
+        <div class="sdv"></div>
+        <p class="sp">In 22 years, Andrew has represented clients in <strong>more than 35 county courts</strong> across northern and central Missouri. He has argued before both Districts of the Missouri Court of Appeals, U.S. Federal District Courts, and litigated a six-week jury trial in California.</p>
+        <p class="sp">But the credential that matters most isn't on a diploma. <strong>Andrew tries cases.</strong> While most peers settle every file, Andrew prepares every case as if a jury will decide it — because sometimes, that's exactly what happens.</p>
+        <div class="sdv"></div>
+        <p class="sp">Andrew and his wife Allison returned to Kirksville to raise their children in the same community where he grew up. When he represents a client, he's representing a neighbor.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sty-ph rv">
+    <img src="assets/missouri-duotone.png" onerror="this.parentElement.style.display='none'" alt="Missouri landscape">
+    <span class="sty-ph-cap">Northeast Missouri · Home</span>
+  </div>
+</section>
+<div class="story-seam-bot"></div>
+
+
+<!-- ═══ PRACTICE ═══ -->
+<section id="prac">
+  <div class="prac-hd">
+    <div class="prac-hl rv"><div class="st"><div class="stl"></div><span class="stt">Practice Areas</span></div><h2 class="sct">Ten Areas of Law.<br>One <span class="eu">Relentless Standard.</span></h2></div>
+    <p class="prac-hr rv rv1">Farwell Law handles civil and criminal matters — with particular depth in personal injury, criminal defense, and wrongful death.</p>
+  </div>
+  <div class="prac-tk" id="ptk">
+    <div class="pc f"><div class="pc-gn">01</div><span class="pc-fb">Primary Focus</span><div class="pcn">01</div><h3 class="pcnm">Personal Injury</h3><p class="pcd">Car wrecks, truck accidents, premises liability. When an insurer's first offer is an insult, we prepare for trial — which is usually when the real offer arrives.</p><span class="pcc">$550K Settlement</span></div>
+    <div class="pc f"><div class="pc-gn">02</div><span class="pc-fb">Primary Focus</span><div class="pcn">02</div><h3 class="pcnm">Criminal Defense</h3><p class="pcd">Misdemeanor through first-degree murder. Andrew has won acquittals in cases the public had already convicted.</p><span class="pcc">Multiple Acquittals</span></div>
+    <div class="pc f"><div class="pc-gn">03</div><span class="pc-fb">Primary Focus</span><div class="pcn">03</div><h3 class="pcnm">Wrongful Death</h3><p class="pcd">Missouri Statute §537.080 gives surviving families a path to justice. We've walked that path — including to a $1.5M judgment.</p><span class="pcc">$1.5M Judgment</span></div>
+    <div class="pc"><div class="pc-gn">04</div><div class="pcn">04</div><h3 class="pcnm">Truck Accidents</h3><p class="pcd">Commercial trucking cases live and die on federal safety regulations, driver logs, and corporate insurance layers.</p></div>
+    <div class="pc"><div class="pc-gn">05</div><div class="pcn">05</div><h3 class="pcnm">Bicycle Accidents</h3><p class="pcd">Cyclists hit by negligent drivers face a legal system built around car-to-car collisions. We fight for your rights.</p></div>
+    <div class="pc"><div class="pc-gn">06</div><div class="pcn">06</div><h3 class="pcnm">Premises Liability</h3><p class="pcd">Property owners owe visitors a duty of reasonable safety. When they cut corners, we hold them accountable.</p></div>
+    <div class="pc"><div class="pc-gn">07</div><div class="pcn">07</div><h3 class="pcnm">Family Law</h3><p class="pcd">Divorce, custody, adoption, child support. Stakes as personal as law gets.</p></div>
+    <div class="pc"><div class="pc-gn">08</div><div class="pcn">08</div><h3 class="pcnm">Estate &amp; Trust</h3><p class="pcd">Estate planning, probate, trust formation. Protect what you've built.</p></div>
+    <div class="pc"><div class="pc-gn">09</div><div class="pcn">09</div><h3 class="pcnm">Real Estate</h3><p class="pcd">Transactions, disputes, and litigation. Missouri real estate law is our wheelhouse.</p></div>
+    <div class="pc"><div class="pc-gn">10</div><div class="pcn">10</div><h3 class="pcnm">Insurance Claims</h3><p class="pcd">Bad faith, coverage disputes. We force carriers to honor the policies you paid for.</p></div>
+  </div>
+</section>
+
+
+<!-- ═══ SERVICE / MAP ═══ -->
+<section id="svc">
+  <div class="svc-i">
+    <div class="svc-g">
+      <div class="rv">
+        <div class="st"><div class="stl"></div><span class="stt">Service Area</span></div>
+        <h2 class="sct" style="margin-bottom:20px">Serving Clients Across<br>Missouri &amp; Beyond.</h2>
+        <p class="svt">Based in Kirksville, Andrew has represented clients in over 35 county courts spanning northern and central Missouri — from Kansas City to Hannibal, north to the Iowa border. He has appeared before Missouri's appellate courts, U.S. Federal District Courts, and tried a six-week case in California.</p>
+        <p class="svt">If your case is in Missouri, we can handle it.</p>
+        <div class="svc-cw">
+          <div class="svc-cl">Counties Served</div>
+          <div class="svc-cs">
+            <span class="cty">Adair</span><span class="cty">Macon</span><span class="cty">Shelby</span>
+            <span class="cty">Knox</span><span class="cty">Schuyler</span><span class="cty">Scotland</span>
+            <span class="cty">Clark</span><span class="cty">Lewis</span><span class="cty">Marion</span>
+            <span class="cty">Putnam</span><span class="cty">Sullivan</span><span class="cty">Linn</span>
+            <span class="cty">Chariton</span><span class="cty">Randolph</span><span class="cty">Monroe</span>
+            <span class="cty">Ralls</span><span class="cty">Pike</span><span class="cty">+ 18 more</span>
+          </div>
+        </div>
+      </div>
+      <div class="rvr">
+        <div class="map-w">
+          <svg class="map-s" id="moM" viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+            <path class="mo-o" d="M45 40 L95 36 L185 34 L275 35 L395 38 L435 40 L438 75 L440 155 L448 200 L445 245 L435 300 L418 340 L380 358 L325 363 L270 370 L260 400 L248 412 L238 395 L218 365 L158 356 L80 350 L47 310 L44 210 L45 90 Z" fill="rgba(184,148,90,.03)" stroke="var(--gold)" stroke-width="1"/>
+            <g><rect class="cr-r" x="180" y="34" width="55" height="50"/><rect class="cr-r" x="235" y="34" width="55" height="50"/><rect class="cr-r" x="290" y="34" width="55" height="50"/><rect class="cr-r" x="345" y="37" width="50" height="48"/><rect class="cr-r" x="180" y="84" width="55" height="50"/><rect class="cr-r" x="235" y="84" width="55" height="50"/><rect class="cr-r" x="290" y="84" width="55" height="50"/><rect class="cr-r" x="95" y="34" width="50" height="50"/><rect class="cr-r" x="95" y="84" width="50" height="50"/><rect class="cr-r" x="180" y="134" width="55" height="50"/><rect class="cr-r" x="235" y="134" width="55" height="50"/></g>
+            <g stroke="rgba(184,148,90,.1)" stroke-width=".5" stroke-dasharray="3 4"><line x1="215" y1="68" x2="100" y2="50"/><line x1="215" y1="68" x2="370" y2="60"/><line x1="215" y1="68" x2="420" y2="150"/><line x1="215" y1="68" x2="380" y2="300"/><line x1="215" y1="68" x2="260" y2="380"/><line x1="215" y1="68" x2="120" y2="300"/><line x1="215" y1="68" x2="60" y2="250"/></g>
+            <g fill="rgba(184,148,90,.35)"><circle cx="100" cy="50" r="2"/><circle cx="370" cy="60" r="2"/><circle cx="420" cy="150" r="2"/><circle cx="380" cy="300" r="2"/><circle cx="260" cy="380" r="2"/><circle cx="120" cy="300" r="2"/><circle cx="60" cy="250" r="2"/></g>
+            <circle class="kpp" cx="215" cy="68" r="5" opacity=".4"/>
+            <circle class="kp" cx="215" cy="68" r="3.5"/>
+            <circle cx="215" cy="68" r="1.5" fill="var(--tx)"/>
+            <text class="mlt" x="202" y="60" font-size="5">ADAIR</text>
+            <text class="mlt" x="248" y="58" font-size="4" opacity=".5">KNOX</text>
+            <text class="mlt" x="195" y="108" font-size="4" opacity=".5">MACON</text>
+            <text class="mlt" x="250" y="108" font-size="4" opacity=".5">SHELBY</text>
+          </svg>
+          <div class="mlb" style="top:20%;left:44%">Kirksville HQ</div>
+          <div class="mlb" style="bottom:10%;right:6%;border-color:var(--brd);color:var(--tx2)">35+ Counties</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ PROCESS ═══ -->
+<section id="proc">
+  <div class="proc-i">
+    <div class="proc-h rv"><div class="st stc"><div class="stl"></div><span class="stt">How It Works</span><div class="stl"></div></div><h2 class="sct">From First Call to<br>Final Resolution</h2></div>
+    <div class="proc-s">
+      <div class="ps rv"><div class="psn">01</div><h3 class="psnn">Free Consultation</h3><p class="psd">Call or submit the form. Andrew reviews your case personally. You get a straight answer.</p></div>
+      <div class="ps rv rv1"><div class="psn">02</div><h3 class="psnn">Strategy &amp; Prep</h3><p class="psd">Investigation, discovery, expert coordination, trial prep. Every case built for a jury.</p></div>
+      <div class="ps rv rv2"><div class="psn">03</div><h3 class="psnn">Resolution</h3><p class="psd">Settlement on your terms, or a verdict from twelve jurors. You pay nothing unless we win.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="test">
+  <div class="test-i">
+    <div class="test-h rv"><div class="st stc"><div class="stl"></div><span class="stt">Client Reviews · 5.0 ★</span><div class="stl"></div></div><h2 class="sct">The Verdict from<br>Real Clients.</h2></div>
+    <div class="test-g">
+      <div class="tc rv"><div class="tcs">★★★★★</div><p class="tct">Andrew listens and doesn't BS you. He's upfront and honest. He does what he says he will. He fights in court. Highly recommend.</p><div class="tcn">J.M.</div><div class="tcc">Personal Injury · Kirksville</div></div>
+      <div class="tc rv rv1"><div class="tcs">★★★★★</div><p class="tct">Can't say enough good about Andrew Farwell. Such a kind and trustworthy man. Integrity and follow through means a lot.</p><div class="tcn">S.R.</div><div class="tcc">Criminal Defense · Macon County</div></div>
+      <div class="tc rv rv2"><div class="tcs">★★★★★</div><p class="tct">Very informative — everything was explained in full detail. I couldn't have asked for better representation.</p><div class="tcn">D.K.</div><div class="tcc">Family Law · Adair County</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq">
+  <div class="faq-i">
+    <div class="faq-h rv"><div class="st stc"><div class="stl"></div><span class="stt">Common Questions</span><div class="stl"></div></div><h2 class="sct">Before You Call,<br>Here's What to Expect.</h2></div>
+    <div class="fl">
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">01</span><span class="fqt">How much does it cost to hire Farwell Law Firm?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>For personal injury and wrongful death, Andrew works on contingency — you pay nothing unless we recover. Criminal defense, family law, and estate fees are discussed openly during your free consultation. Every engagement is in writing.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">02</span><span class="fqt">Is the consultation really free?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. No charge. Andrew gives you an honest assessment of your case, the likely path forward, and realistic outcomes. No pressure afterward.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">03</span><span class="fqt">How quickly should I act after an injury or arrest?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Immediately. Missouri has strict statutes of limitations. For criminal matters, the hours right after an arrest often determine the trajectory of the entire case.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">04</span><span class="fqt">Will Andrew handle my case personally?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. This is a solo firm by design. No associate, no rotating paralegals. When you hire Farwell Law, you hire Andrew.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">05</span><span class="fqt">What if my case is outside Adair County?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Andrew has tried cases in 35+ Missouri counties, both districts of the Missouri Court of Appeals, U.S. Federal District Court, and even California. Distance is not a barrier.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">06</span><span class="fqt">How long does a case typically take?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>It depends on the case. Settlements can resolve in months; trials may take a year or more. Andrew gives you a realistic timeline, not a sales pitch.</p></div></div></div>
+      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">07</span><span class="fqt">What makes Farwell Law different?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Trial experience. Most attorneys haven't tried a case in years. Andrew has tried cases across Missouri for two decades. That readiness is leverage — even when your case never sees a courtroom.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="st stc" style="position:relative"><div class="stl"></div><span class="stt">Get Started</span><div class="stl"></div></div>
+  <h2 class="cta-t rv">The Free Consultation Is<br><span class="es">a Phone Call Away.</span></h2>
+  <p class="cta-s rv">Whether you've been injured, charged with a crime, or need counsel — Andrew will personally review your situation. No obligation. Just a straight conversation about what comes next.</p>
+  <div class="cta-a rv"><a href="#contact" class="bp">Free Case Review</a><a href="tel:6606652115" class="cta-ph">660.665.2115</a></div>
+</section>
+
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="cg">
+    <div class="rv">
+      <div class="st"><div class="stl"></div><span class="stt">Contact</span></div>
+      <h2 class="cft">Tell Us About<br>Your <span class="eri">Situation.</span></h2>
+      <p class="cfs">Complete the form for a free, no-obligation case review. Andrew will personally follow up — usually within one business day.</p>
+      <div>
+        <div class="fr"><div class="fg"><label>First Name</label><input type="text" placeholder="John"></div><div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div></div>
+        <div class="fr"><div class="fg"><label>Phone</label><input type="tel" placeholder="660.000.0000"></div><div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div></div>
+        <div class="fg"><label>Practice Area</label><select><option value="">Select your situation...</option><option>Personal Injury</option><option>Criminal Defense</option><option>Wrongful Death</option><option>Truck Accident</option><option>Bicycle Accident</option><option>Premises Liability</option><option>Family Law</option><option>Estate &amp; Trust</option><option>Real Estate</option><option>Insurance Claim</option><option>Other</option></select></div>
+        <div class="fg"><label>Brief Description</label><textarea placeholder="What happened? When? Are you currently represented?"></textarea></div>
+        <button class="fsb">Submit for Free Case Review</button>
+      </div>
+    </div>
+    <div class="ci rv rv1">
+      <div class="ib"><div class="il">Call Direct</div><div class="iv"><a href="tel:6606652115">660.665.2115</a></div></div><div class="idv"></div>
+      <div class="ib"><div class="il">Email</div><div class="iv"><a href="mailto:arfarwell@farwelllawfirm.com">arfarwell@farwelllawfirm.com</a></div></div><div class="idv"></div>
+      <div class="ib"><div class="il">Office</div><div class="iv">715 N Baltimore St<br>Kirksville, MO 63501</div></div><div class="idv"></div>
+      <div class="ib"><div class="il">Hours</div><div class="iv">Monday – Friday: 8 AM – 5 PM<br>Sat–Sun: Closed<br><br><em style="font-size:.8rem;color:var(--tx3)">Emergency criminal matters — call anytime.</em></div></div><div class="idv"></div>
+      <div class="disc"><p>The information on this site does not create an attorney/client relationship. Past results do not guarantee similar outcomes. Every case is judged on its own merits.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="fm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="6" x2="20" y2="6"/><path d="M4 6 L2 12 L6 12 Z"/><path d="M20 6 L18 12 L22 12 Z"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+  <div class="ft-i">
+    <div><div class="ft-bn">Farwell</div><div class="ft-tl">Law Firm · Kirksville, MO · Est. 2003</div></div>
+    <ul class="ft-lk"><li><a href="#why">Why Farwell</a></li><li><a href="#results">Results</a></li><li><a href="#story">About</a></li><li><a href="#prac">Practice</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
+    <div class="ft-ct"><a href="tel:6606652115">660.665.2115</a><a href="mailto:arfarwell@farwelllawfirm.com">arfarwell@farwelllawfirm.com</a><a href="#">715 N Baltimore St, Kirksville MO</a></div>
+  </div>
+  <div class="ft-b"><span class="ft-cp">© 2025 The Farwell Law Firm, LLC.</span><span class="ft-lg">Results may vary. Prior results do not guarantee similar outcomes.</span></div>
+</footer>
+
+<div class="mb"><a href="tel:6606652115" class="mbc">Call Now</a><a href="#contact" class="mbf">Free Consultation</a></div>
+
+<script>
+const d=document.getElementById('cd'),r=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+function ac(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;d.style.left=mx+'px';d.style.top=my+'px';r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(ac)}
+ac();
+document.querySelectorAll('a,button,.pc,.res-hero,.res-card,.fq,.cty').forEach(el=>{el.addEventListener('mouseenter',()=>r.classList.add('a'));el.addEventListener('mouseleave',()=>{r.classList.remove('a');r.classList.remove('view')})});
+document.querySelectorAll('.res-hero,.res-card').forEach(el=>{el.addEventListener('mouseenter',()=>{r.classList.add('view')});el.addEventListener('mouseleave',()=>{r.classList.remove('view')})});
+
+window.addEventListener('load',()=>{setTimeout(()=>{const p=document.getElementById('pl');p.style.opacity='0';setTimeout(()=>p.style.display='none',1000)},2000)});
+window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('spg').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100+'%';document.getElementById('nv').classList.toggle('sc',window.scrollY>60)});
+
+function tm(){document.getElementById('hb').classList.toggle('o');document.getElementById('mn').classList.toggle('o')}
+function cm(){document.getElementById('hb').classList.remove('o');document.getElementById('mn').classList.remove('o')}
+
+const ro=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('v');ro.unobserve(i.target)}})},{threshold:.08});
+document.querySelectorAll('.rv,.rvl,.rvr,.rvs').forEach(el=>ro.observe(el));
+
+function ac2(el,t,s=''){const dur=1600,st=performance.now();function step(n){const e=n-st,p=Math.min(e/dur,1),ea=1-Math.pow(1-p,3),c=Math.round(t*ea);el.textContent=c+s;if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+const co=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){const t=parseInt(i.target.dataset.count);if(t)ac2(i.target,t);co.unobserve(i.target)}})},{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+
+const mo=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('dr');mo.unobserve(i.target)}})},{threshold:.2});
+const mm=document.getElementById('moM');if(mm)mo.observe(mm);
+
+function tf(b){const i=b.parentElement;document.querySelectorAll('.fi.op').forEach(o=>{if(o!==i)o.classList.remove('op')});i.classList.toggle('op')}
+
+const tk=document.getElementById('ptk');
+if(tk){let id=false,sx,sl;
+tk.addEventListener('mousedown',e=>{id=true;tk.style.cursor='grabbing';sx=e.pageX-tk.offsetLeft;sl=tk.scrollLeft});
+tk.addEventListener('mouseleave',()=>{id=false;tk.style.cursor='grab'});
+tk.addEventListener('mouseup',()=>{id=false;tk.style.cursor='grab'});
+tk.addEventListener('mousemove',e=>{if(!id)return;e.preventDefault();tk.scrollLeft=sl-(e.pageX-tk.offsetLeft-sx)*1.5})}
+
+// Parallax on hero headline — subtle mouse-follow
+const hh=document.querySelector('.hero-hl');
+if(hh&&window.innerWidth>768){
+  document.addEventListener('mousemove',e=>{
+    const x=(e.clientX/window.innerWidth-.5)*8;
+    const y=(e.clientY/window.innerHeight-.5)*4;
+    hh.style.transform=`translate(${x}px,${y}px)`;
+  });
+}
+</script>
+</body>
+</html>
