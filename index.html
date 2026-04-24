@@ -135,7 +135,7 @@ nav.sc { background:rgba(5,6,8,.94); backdrop-filter:blur(20px) saturate(1.6); p
 .hero-atmo {
   position: absolute; inset: 0;
   background: url('assets/courtroom-noir.png') center/cover no-repeat;
-  opacity: 0.1;
+  opacity: 0.14;
   filter: grayscale(60%) contrast(1.2) sepia(15%);
   pointer-events: none;
   will-change: transform;
@@ -858,11 +858,16 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 .res-hero .rdesc, .res-card .rdesc-sm { position: relative; z-index: 1; }
 .stamp {
   position: absolute; top: 16px; right: 16px; z-index: 1;
-  font-family: var(--mon); font-size: .55rem; letter-spacing: .2em;
-  text-transform: uppercase; color: var(--rust); opacity: .12;
-  border: 1px solid var(--rust); padding: 4px 10px;
-  transform: rotate(-6deg); pointer-events: none;
+  font-family: var(--mon); font-size: .5rem; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--gold); opacity: .2;
+  border: 1px solid var(--gold-dk); padding: 4px 8px;
+  transform: rotate(-6deg); pointer-events: none; border-radius: 1px;
 }
+/* Result card hover states */
+.res-hero, .res-card { transition: border-color .25s ease-out; }
+.res-hero:hover, .res-card:hover { border-color: var(--gold) !important; }
+.res-hero:hover .ra-lg, .res-hero:hover .ra-sm, .res-card:hover .ra-sm { text-shadow: 0 0 20px rgba(184,148,90,.2); }
+.res-hero:hover .ra-v, .res-card:hover .v { text-shadow: 0 0 20px rgba(139,58,42,.3); }
 
 /* ═══ #4 BIO TYPEWRITER ═══ */
 .tw-cursor {
@@ -971,10 +976,15 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
   animation: kenBurns 20s ease-in-out infinite alternate;
 }
 @keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.05); } }
+/* HERO_MODE: "photo" (Option B, default)
+   To switch to Option A (pure black):
+   - Remove or hide .hero-atmo
+   - Set #hero { background: radial-gradient(ellipse at center, #0f0f0f, #000); }
+*/
 .hero-atmo::after {
   background:
-    linear-gradient(to right, var(--bg-deep) 0%, rgba(5,6,8,.85) 40%, rgba(5,6,8,.3) 100%),
-    linear-gradient(to bottom, var(--bg-deep) 0%, transparent 25%, transparent 70%, var(--bg-deep) 100%) !important;
+    linear-gradient(to right, rgba(5,6,8,.92) 0%, rgba(5,6,8,.70) 40%, rgba(5,6,8,.25) 100%),
+    linear-gradient(to bottom, var(--bg-deep) 0%, transparent 30%, transparent 65%, var(--bg-deep) 100%) !important;
 }
 @media(prefers-reduced-motion:reduce){
   .hero-atmo { animation: none; }
@@ -991,6 +1001,56 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 .skip-link:focus { top: 0; }
 *:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+
+/* ═══ TESTIMONIALS UPGRADE ═══ */
+.test-stars { font-size: 1.1rem; color: var(--rust); letter-spacing: .2em; text-align: center; margin-top: -8px; margin-bottom: 8px; }
+.test-rating { font-family: var(--mon); font-size: .65rem; color: var(--tx2); letter-spacing: .05em; margin-left: 8px; vertical-align: middle; }
+.tc { transition: border-color .25s ease-out, transform .25s ease-out, box-shadow .25s ease-out; cursor: default; }
+.tc:hover { border-color: var(--gold) !important; transform: translateY(-2px) rotate(0deg) !important; box-shadow: 0 8px 24px rgba(0,0,0,.3) !important; }
+.test-link { text-align: center; margin-top: 48px; }
+.test-glink { display: inline-flex; align-items: center; gap: 8px; }
+.test-arrow { display: inline-block; transition: transform .2s ease; }
+.test-glink:hover .test-arrow { transform: translateX(4px); }
+
+
+/* ═══ FOOTER EDITORIAL ═══ */
+footer { background: var(--bg-deep); border-top: 1px solid var(--brd); padding: 96px 56px 64px; }
+.ft-editorial { margin-bottom: 48px; }
+.ft-sign {
+  font-family: var(--dsp); font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 400; color: var(--tx); line-height: 1.15; letter-spacing: -0.02em;
+}
+.ft-accent { color: var(--rust); font-style: italic; }
+.ft-rule { width: 64px; height: 1px; background: var(--gold); margin-top: 32px; }
+.ft-cta { display: flex; align-items: center; gap: 24px; margin-bottom: 64px; flex-wrap: wrap; }
+.ft-or { font-family: var(--ser); font-size: .9rem; color: var(--tx3); }
+.ft-phone { color: var(--tx2); text-decoration: none; transition: color .2s; }
+.ft-phone:hover { color: var(--gold); }
+.ft-mark { text-align: center; margin-bottom: 48px; }
+.ft-i { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; padding-top: 48px; border-top: 1px solid var(--brd); margin-bottom: 48px; }
+.ft-bn { font-family: var(--dsp); font-size: 1.4rem; font-weight: 700; color: var(--tx); letter-spacing: .04em; margin-bottom: 6px; }
+.ft-tl { font-family: var(--mon); font-size: .5rem; letter-spacing: .18em; text-transform: uppercase; color: var(--tx3); }
+.ft-lk { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.ft-lk a { font-family: var(--ser); font-size: .85rem; color: var(--tx2); text-decoration: none; transition: color .2s; }
+.ft-lk a:hover { color: var(--gold); }
+.ft-ct { display: flex; flex-direction: column; gap: 10px; text-align: right; }
+.ft-ct a, .ft-ct span { font-family: var(--mon); font-size: .6rem; letter-spacing: .06em; color: var(--tx2); text-decoration: none; }
+.ft-ct a:hover { color: var(--gold); }
+.ft-b { display: flex; justify-content: space-between; padding-top: 32px; border-top: 1px solid var(--brd); flex-wrap: wrap; gap: 12px; }
+.ft-cp, .ft-lg { font-family: var(--mon); font-size: .5rem; letter-spacing: .08em; color: var(--tx3); }
+@media(max-width:900px){
+  footer { padding: 64px 24px 48px; }
+  .ft-i { grid-template-columns: 1fr; gap: 32px; }
+  .ft-ct { text-align: left; }
+  .ft-b { flex-direction: column; }
+}
+
+
+/* ═══ MAP CROSS-HIGHLIGHTING ═══ */
+.cty { transition: border-color .2s, color .2s, background .2s; cursor: default; }
+.cty.cty-hl { border-color: var(--gold) !important; color: var(--gold) !important; background: rgba(184,148,90,.08); }
+.mo-served.map-hl { fill: rgba(184,148,90,.5) !important; transform-origin: center; transition: fill .2s ease, transform .2s ease; }
 
 </style>
 </head>
@@ -1372,11 +1432,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
 <!-- ═══ TESTIMONIALS ═══ -->
 <section id="test">
   <div class="test-i">
-    <div class="test-h rv"><div class="st stc"><div class="stl"></div><span class="stt">Client Reviews · 5.0 ★</span><div class="stl"></div></div><h2 class="sct">The Verdict from<br>Real Clients.</h2></div>
+    <div class="test-h rv"><div class="st stc"><div class="stl"></div><span class="stt">Client Reviews</span><div class="stl"></div></div><div class="test-stars">★ ★ ★ ★ ★ <span class="test-rating">5.0</span></div><div style="display:none"><div class="stl"></div></div><h2 class="sct">The Verdict from<br>Real Clients.</h2></div>
     <div class="test-g">
-      <div class="tc rv"><div class="tcs">★★★★★</div><p class="tct">Andrew listens and doesn't BS you. He's upfront and honest. He does what he says he will. He fights in court. Highly recommend.</p><div class="tcn">J.M.</div><div class="tcc">Personal Injury · Kirksville</div></div>
-      <div class="tc rv rv1"><div class="tcs">★★★★★</div><p class="tct">Can't say enough good about Andrew Farwell. Such a kind and trustworthy man. Integrity and follow through means a lot.</p><div class="tcn">S.R.</div><div class="tcc">Criminal Defense · Macon County</div></div>
-      <div class="tc rv rv2"><div class="tcs">★★★★★</div><p class="tct">Very informative — everything was explained in full detail. I couldn't have asked for better representation.</p><div class="tcn">D.K.</div><div class="tcc">Family Law · Adair County</div></div>
+      <div class="tc rv"><div class="tcs">★★★★★</div><p class="tct">Andrew listens and doesn't BS you. He's upfront and honest. He does what he says he will. He fights in court. Highly recommend.</p><div class="tcn">J.M.</div><div class="tcc">Personal Injury · Kirksville · 2023</div></div>
+      <div class="tc rv rv1"><div class="tcs">★★★★★</div><p class="tct">Can't say enough good about Andrew Farwell. Such a kind and trustworthy man. Integrity and follow through means a lot.</p><div class="tcn">S.R.</div><div class="tcc">Criminal Defense · Macon County · 2024</div></div>
+      <div class="tc rv rv2"><div class="tcs">★★★★★</div><p class="tct">Very informative — everything was explained in full detail. I couldn't have asked for better representation.</p><div class="tcn">D.K.</div><div class="tcc">Family Law · Adair County · 2024</div></div>
     </div>
   </div>
 </section>
@@ -1436,11 +1496,25 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="fm"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1"><line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="6" x2="20" y2="6"/><path d="M4 6 L2 12 L6 12 Z"/><path d="M20 6 L18 12 L22 12 Z"/><line x1="8" y1="22" x2="16" y2="22"/></svg></div>
+  <div class="ft-editorial rv">
+    <h2 class="ft-sign">If your matter is in Missouri,<br><span class="ft-accent">Andrew</span> will be there.</h2>
+    <div class="ft-rule"></div>
+  </div>
+  <div class="ft-cta rv rv1">
+    <a href="#contact" class="bp">Start the Conversation</a>
+    <span class="ft-or">or call <a href="tel:6606652115" class="ft-phone">660.665.2115</a></span>
+  </div>
+  <div class="ft-mark">
+    <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1" width="32" height="32" opacity=".3">
+      <line x1="12" y1="2" x2="12" y2="22"/><line x1="4" y1="6" x2="20" y2="6"/>
+      <path d="M4 6 L2 12 L6 12 Z"/><path d="M20 6 L18 12 L22 12 Z"/>
+      <line x1="8" y1="22" x2="16" y2="22"/>
+    </svg>
+  </div>
   <div class="ft-i">
     <div><div class="ft-bn">Farwell</div><div class="ft-tl">Law Firm · Kirksville, MO · Est. 2003</div></div>
     <ul class="ft-lk"><li><a href="#why">Why Farwell</a></li><li><a href="#results">Results</a></li><li><a href="#story">About</a></li><li><a href="#prac">Practice</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul>
-    <div class="ft-ct"><a href="tel:6606652115">660.665.2115</a><a href="mailto:arfarwell@farwelllawfirm.com">arfarwell@farwelllawfirm.com</a><a href="#">715 N Baltimore St, Kirksville MO</a></div>
+    <div class="ft-ct"><a href="tel:6606652115">660.665.2115</a><a href="mailto:arfarwell@farwelllawfirm.com">arfarwell@farwelllawfirm.com</a><span>715 N Baltimore St, Kirksville MO 63501</span></div>
   </div>
   <div class="ft-b"><span class="ft-cp">© 2025 The Farwell Law Firm, LLC.</span><span class="ft-lg">Results may vary. Prior results do not guarantee similar outcomes.</span></div>
 </footer>
@@ -1630,7 +1704,12 @@ setTimeout(function(){
     var text = v.textContent.trim();
     var stamp = document.createElement('div');
     stamp.className = 'stamp';
-    stamp.textContent = text.match(/Not/i) ? 'VERDICT' : 'SETTLEMENT';
+    // VERDICT for acquittals, JUDGMENT for court awards, SETTLEMENT for settlements
+    var parent = c.querySelector('.rdesc,.rdesc-sm');
+    var desc = parent ? parent.textContent : '';
+    if (text.match(/Not/i)) stamp.textContent = 'VERDICT';
+    else if (desc.match(/jury awarded|judgment/i)) stamp.textContent = 'JUDGMENT';
+    else stamp.textContent = 'SETTLEMENT';
     c.appendChild(stamp);
   });
 })();
@@ -1660,6 +1739,53 @@ setTimeout(function(){
     });
   }, {threshold: 0.5});
   obs.observe(cursor);
+})();
+
+
+/* ═══ MAP CROSS-HIGHLIGHTING ═══ */
+(function(){
+  var pills = document.querySelectorAll('.svc-cs .cty');
+  var counties = document.querySelectorAll('.mo-served');
+  if(!pills.length || !counties.length) return;
+
+  // Build lookup maps
+  var countyByName = {};
+  counties.forEach(function(c){ countyByName[c.getAttribute('data-name')] = c; });
+  var pillByName = {};
+  pills.forEach(function(p){
+    var name = p.textContent.trim();
+    if(name && !name.startsWith('+')) pillByName[name] = p;
+  });
+
+  // Pill → County highlight
+  pills.forEach(function(p){
+    var name = p.textContent.trim();
+    if(!name || name.startsWith('+')) return;
+    p.style.cursor = 'crosshair';
+    p.addEventListener('mouseenter', function(){
+      p.classList.add('cty-hl');
+      var c = countyByName[name];
+      if(c) c.classList.add('map-hl');
+    });
+    p.addEventListener('mouseleave', function(){
+      p.classList.remove('cty-hl');
+      var c = countyByName[name];
+      if(c) c.classList.remove('map-hl');
+    });
+  });
+
+  // County → Pill highlight
+  counties.forEach(function(c){
+    var name = c.getAttribute('data-name');
+    c.addEventListener('mouseenter', function(){
+      var p = pillByName[name];
+      if(p) p.classList.add('cty-hl');
+    });
+    c.addEventListener('mouseleave', function(){
+      var p = pillByName[name];
+      if(p) p.classList.remove('cty-hl');
+    });
+  });
 })();
 
 </script>
