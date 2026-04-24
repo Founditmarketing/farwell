@@ -7,6 +7,7 @@
 <meta name="description" content="Andrew R. Farwell has tried jury cases in 35+ Missouri counties for over two decades. Your case deserves someone ready for trial. Personal injury, criminal defense, wrongful death — Kirksville, MO.">
 <meta name="theme-color" content="#080a0d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=Space+Mono:wght@400;700&display=swap">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -334,7 +335,7 @@ nav.sc { background:rgba(5,6,8,.94); backdrop-filter:blur(20px) saturate(1.6); p
   border-top: 1px solid var(--br);
 }
 /* Massive background number */
-.why-bgn { position:absolute; right:-3%; top:50%; transform:translateY(-50%); font-family:var(--dsp); font-size:clamp(10rem,28vw,30rem); font-weight:900; color:rgba(184,148,90,.03); line-height:1; pointer-events:none; user-select:none; }
+/* .why-bgn removed — redundant visual */
 .why-i { max-width:1100px; margin:0 auto; position:relative; z-index:1; }
 .st { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
 .stc { justify-content:center; }
@@ -382,7 +383,7 @@ nav.sc { background:rgba(5,6,8,.94); backdrop-filter:blur(20px) saturate(1.6); p
 
 @media(max-width:900px){
   #why{padding:80px 24px}
-  .why-bgn{display:none}
+  /* .why-bgn removed */
   .why-sh{padding:32px 20px;}
   .wsn{font-size:3.5rem;}
   .why-pts{gap:12px;border:none;background:transparent;}
@@ -940,6 +941,57 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 }
 .cta-underline.drawn::after { width: 100%; }
 
+
+/* ═══ SCROLL REVEAL FIX ═══ */
+/* Ensure all revealed items reach full opacity */
+.rv, .rvl, .rvr, .rvs { opacity: 0; transform: translateY(24px); transition: opacity .6s ease-out, transform .6s ease-out; }
+.rv.v, .rvl.v, .rvr.v, .rvs.v { opacity: 1 !important; transform: none !important; }
+.rv1 { transition-delay: .12s; }
+.rv2 { transition-delay: .24s; }
+@media(prefers-reduced-motion:reduce){
+  .rv, .rvl, .rvr, .rvs { opacity: 1; transform: none; transition: none; }
+}
+
+
+/* ═══ UNIFIED BUTTON SYSTEM ═══ */
+/* Primary: .bp — gold bg, dark text, oxblood hover fill */
+/* Secondary: .bs — thin border, ghost, fills to gold on hover */
+.nc { padding:11px 22px !important; border:1px solid rgba(184,148,90,.4) !important; color:var(--gold) !important; 
+  font-family:var(--mon) !important; font-size:.62rem !important; letter-spacing:.14em !important;
+  text-transform:uppercase; text-decoration:none !important; transition:all .3s !important; background:transparent !important; }
+.nc::after { display:none !important; }
+.nc:hover { background:var(--gold) !important; color:var(--bg) !important; border-color:var(--gold) !important; }
+
+
+/* ═══ CINEMATIC HERO (OPTION B) ═══ */
+/* To switch to OPTION A (pure black): 
+   - set .hero-atmo { display: none; }
+   - set #hero background to: radial-gradient(ellipse at center, #0a0a0a, #000) */
+.hero-atmo {
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+@keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.05); } }
+.hero-atmo::after {
+  background:
+    linear-gradient(to right, var(--bg-deep) 0%, rgba(5,6,8,.85) 40%, rgba(5,6,8,.3) 100%),
+    linear-gradient(to bottom, var(--bg-deep) 0%, transparent 25%, transparent 70%, var(--bg-deep) 100%) !important;
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-atmo { animation: none; }
+}
+
+
+/* ═══ FAQ UPGRADE ═══ */
+.fic { transition: transform .3s ease; }
+.fi.op .fic { transform: rotate(45deg); }
+
+
+/* ═══ ACCESSIBILITY ═══ */
+.skip-link { position: absolute; top: -40px; left: 0; background: var(--gold); color: var(--bg); padding: 8px 16px; z-index: 100001; font-family: var(--mon); font-size: .7rem; text-decoration: none; transition: top .2s; }
+.skip-link:focus { top: 0; }
+*:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
 </style>
 </head>
 <body>
@@ -991,7 +1043,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
   </div>
   <div class="hero-ad sup-fade"><span class="hero-ad-text">Andrew shows up.</span></div>
   <div class="hero-body sup-fade"><p>Twenty-two years in practice. <strong>Thirty-five Missouri counties.</strong> Jury trials from misdemeanor to first-degree murder — including a six-week trial in California. When you need a lawyer who has done the work of standing before a jury, Andrew Farwell is here.</p></div>
-  <div class="hero-act sup-fade"><a href="#contact" class="bp">Talk to Andrew</a><a href="tel:6606652115" class="bs">660.665.2115</a></div>
+  <div class="hero-act sup-fade"><a href="#contact" class="bp">Talk to Andrew</a><a href="tel:6606652115" class="bs" aria-label="Call Farwell Law at 660-665-2115">660.665.2115</a></div>
   <div class="hero-tr">
     <div class="tri"><span class="trn" data-count="22">0</span><span class="trl">Years in<br>Practice</span></div>
     <div class="tri"><span class="trn">35+</span><span class="trl">Missouri<br>Counties</span></div>
@@ -1003,7 +1055,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 
 <!-- ═══ WHY ═══ -->
 <section id="why">
-  <div class="why-bgn">35+</div>
+  
   <div class="why-i">
     <div class="why-hd rv">
       <div class="st stc"><div class="stl"></div><span class="stt">The Practice</span><div class="stl"></div></div>
@@ -1335,13 +1387,13 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
   <div class="faq-i">
     <div class="faq-h rv"><div class="st stc"><div class="stl"></div><span class="stt">Common Questions</span><div class="stl"></div></div><h2 class="sct">Before You Call,<br>Here's What to Expect.</h2></div>
     <div class="fl">
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">01</span><span class="fqt">How much does it cost to hire Farwell Law Firm?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>For personal injury and wrongful death, Andrew works on contingency — you pay nothing unless we recover. Criminal defense, family law, and estate fees are discussed openly during your free consultation. Every engagement is in writing.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">02</span><span class="fqt">Is the consultation really free?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. No charge. Andrew gives you an honest assessment of your case, the likely path forward, and realistic outcomes. No pressure afterward.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">03</span><span class="fqt">How quickly should I act after an injury or arrest?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Immediately. Missouri has strict statutes of limitations. For criminal matters, the hours right after an arrest often determine the trajectory of the entire case.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">04</span><span class="fqt">Will Andrew handle my case personally?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. This is a solo firm by design. No associate, no rotating paralegals. When you hire Farwell Law, you hire Andrew.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">05</span><span class="fqt">What if my case is outside Adair County?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Andrew has tried cases in 35+ Missouri counties, both districts of the Missouri Court of Appeals, U.S. Federal District Court, and even California. Distance is not a barrier.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">06</span><span class="fqt">How long does a case typically take?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>It depends on the case. Settlements can resolve in months; trials may take a year or more. Andrew gives you a realistic timeline, not a sales pitch.</p></div></div></div>
-      <div class="fi rv"><button class="fq" onclick="tf(this)"><span class="fqn">07</span><span class="fqt">What makes Farwell Law different?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Andrew tries cases. He has done so for twenty-two years, across thirty-five counties. He answers his own phone. He does his own work. That’s the practice.</p></div></div></div>
+      <div class="fi rv op" id="faq-cost"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">01</span><span class="fqt">How much does it cost to hire Farwell Law Firm?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>For personal injury and wrongful death, Andrew works on contingency — you pay nothing unless we recover. Criminal defense, family law, and estate fees are discussed openly during your free consultation. Every engagement is in writing.</p></div></div></div>
+      <div class="fi rv" id="faq-free"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">02</span><span class="fqt">Is the consultation really free?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. No charge. Andrew gives you an honest assessment of your case, the likely path forward, and realistic outcomes. No pressure afterward.</p></div></div></div>
+      <div class="fi rv" id="faq-timing"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">03</span><span class="fqt">How quickly should I act after an injury or arrest?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Immediately. Missouri has strict statutes of limitations. For criminal matters, the hours right after an arrest often determine the trajectory of the entire case.</p></div></div></div>
+      <div class="fi rv" id="faq-personal"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">04</span><span class="fqt">Will Andrew handle my case personally?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Yes. This is a solo firm by design. No associate, no rotating paralegals. When you hire Farwell Law, you hire Andrew.</p></div></div></div>
+      <div class="fi rv" id="faq-location"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">05</span><span class="fqt">What if my case is outside Adair County?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Andrew has tried cases in 35+ Missouri counties, both districts of the Missouri Court of Appeals, U.S. Federal District Court, and even California. Distance is not a barrier.</p></div></div></div>
+      <div class="fi rv" id="faq-duration"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">06</span><span class="fqt">How long does a case typically take?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>It depends on the case. Settlements can resolve in months; trials may take a year or more. Andrew gives you a realistic timeline, not a sales pitch.</p></div></div></div>
+      <div class="fi rv" id="faq-different"><button class="fq" onclick="tf(this)" aria-expanded="false"><span class="fqn">07</span><span class="fqt">What makes Farwell Law different?</span><div class="fic"></div></button><div class="fa"><div class="fai"><p>Andrew tries cases. He has done so for twenty-two years, across thirty-five counties. He answers his own phone. He does his own work. That’s the practice.</p></div></div></div>
     </div>
   </div>
 </section>
@@ -1352,7 +1404,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
   <div class="st stc" style="position:relative"><div class="stl"></div><span class="stt">Reach Out</span><div class="stl"></div></div>
   <h2 class="cta-t rv">A Conversation Costs<br><span class="es cta-underline">Nothing.</span></h2>
   <p class="cta-s rv">Whether you've been injured, charged with a crime, or need counsel — Andrew will personally review your situation. No obligation. Just a straight conversation about what comes next.</p>
-  <div class="cta-a rv"><a href="#contact" class="bp">Talk to Andrew</a><a href="tel:6606652115" class="cta-ph">660.665.2115</a></div>
+  <div class="cta-a rv"><a href="#contact" class="bp">Talk to Andrew</a><a href="tel:6606652115" class="cta-ph" aria-label="Call Farwell Law at 660-665-2115">660.665.2115</a></div>
 </section>
 
 
@@ -1420,7 +1472,7 @@ document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
 const mo=new IntersectionObserver(e=>{e.forEach(i=>{if(i.isIntersecting){i.target.classList.add('dr');mo.unobserve(i.target)}})},{threshold:.2});
 const mm=document.getElementById('moM');if(mm)mo.observe(mm);
 
-function tf(b){const i=b.parentElement;document.querySelectorAll('.fi.op').forEach(o=>{if(o!==i)o.classList.remove('op')});i.classList.toggle('op')}
+function tf(b){const i=b.parentElement;document.querySelectorAll('.fi.op').forEach(o=>{if(o!==i){o.classList.remove('op');var ob=o.querySelector('.fq');if(ob)ob.setAttribute('aria-expanded','false')}});i.classList.toggle('op');b.setAttribute('aria-expanded',i.classList.contains('op'));if(i.id)history.replaceState(null,'','#'+i.id)}
 
 const tk=document.getElementById('ptk');
 if(tk){let id=false,sx,sl;
