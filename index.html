@@ -841,6 +841,105 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 @media(max-width:768px){ .cursor-label{display:none} }
 @media(prefers-reduced-motion:reduce){ .file-wm{opacity:.4;transition:none} }
 
+
+/* ═══ #3 RESULTS DOSSIER ═══ */
+.res-heroes { position: relative; }
+.res-hero, .res-card { position: relative; overflow: hidden; }
+.res-hero::before, .res-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23p)' opacity='.15'/%3E%3C/svg%3E");
+  opacity: .04; pointer-events: none; z-index: 0;
+}
+.res-hero .rt, .res-card .rt {
+  font-family: var(--mon); font-size: .55rem; letter-spacing: .18em;
+  text-transform: uppercase; position: relative; z-index: 1;
+}
+.res-hero .rdesc, .res-card .rdesc-sm { position: relative; z-index: 1; }
+.stamp {
+  position: absolute; top: 16px; right: 16px; z-index: 1;
+  font-family: var(--mon); font-size: .55rem; letter-spacing: .2em;
+  text-transform: uppercase; color: var(--rust); opacity: .12;
+  border: 1px solid var(--rust); padding: 4px 10px;
+  transform: rotate(-6deg); pointer-events: none;
+}
+
+/* ═══ #4 BIO TYPEWRITER ═══ */
+.tw-cursor {
+  display: inline-block; color: var(--gold);
+  animation: twBlink 1s step-end infinite;
+  margin-left: 2px; font-weight: 300;
+}
+@keyframes twBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+.story-seam { height: 2px; background: linear-gradient(90deg, transparent, var(--rust), transparent); opacity: .2; }
+.story-seam-bot { height: 1px; background: linear-gradient(90deg, transparent, var(--gold-dk), transparent); opacity: .15; }
+
+/* ═══ #5 PRACTICE AREAS VERTICAL ═══ */
+.prac-tk {
+  display: flex; flex-direction: column !important;
+  gap: 0 !important; overflow: visible !important;
+  cursor: default !important; padding: 0 !important;
+}
+.pc {
+  display: grid !important; grid-template-columns: 80px 1fr auto !important;
+  gap: 0 24px !important; align-items: center !important;
+  width: 100% !important; min-width: 0 !important; flex: none !important;
+  min-height: auto !important; padding: 28px 48px !important;
+  border-bottom: 1px solid var(--brd) !important;
+  background: transparent !important; border-radius: 0 !important;
+  transition: background .3s ease !important; cursor: pointer !important;
+}
+.pc:hover { background: rgba(139,58,42,.04) !important; }
+.pc .pcn { font-family: var(--dsp) !important; font-size: 2.2rem !important; font-weight: 300 !important; color: var(--tx3) !important; opacity: .3 !important; grid-row: 1; grid-column: 1; }
+.pc .pcnm { font-size: 1.1rem !important; grid-column: 2; margin: 0 !important; }
+.pc .pcd { font-size: .82rem !important; color: var(--tx2) !important; grid-column: 2; margin-top: 4px !important; }
+.pc .pcc { font-family: var(--mon) !important; font-size: .55rem !important; letter-spacing: .12em !important; color: var(--gold) !important; grid-column: 3; white-space: nowrap; }
+.pc .pc-gn, .pc .pc-fb { display: none !important; }
+@media(max-width:768px){
+  .pc { grid-template-columns: 50px 1fr !important; padding: 20px 24px !important; }
+  .pc .pcc { grid-column: 2; margin-top: 6px; }
+}
+
+/* ═══ #6 PROCESS TIMELINE ═══ */
+.proc-s { position: relative; }
+.proc-s::before {
+  content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+  width: 1px; background: var(--brd); transform: translateX(-50%);
+}
+
+/* ═══ #7 REVIEWS TORN CLIPPINGS ═══ */
+.tc {
+  background: rgba(15,21,32,.6) !important;
+  border: 1px solid var(--brd) !important;
+  position: relative !important;
+}
+.tc::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23t)' opacity='.12'/%3E%3C/svg%3E");
+  opacity: .04; pointer-events: none;
+}
+.tc:nth-child(1) { transform: rotate(-1deg); }
+.tc:nth-child(2) { transform: rotate(1.5deg); }
+.tc:nth-child(3) { transform: rotate(-0.8deg); }
+.tcs { color: var(--rust) !important; }
+.tcn { font-variant: small-caps !important; letter-spacing: .1em !important; }
+
+/* ═══ #8 FAQ ANIMATED ACCORDION ═══ */
+.fa { transition: max-height .18s ease, opacity .18s ease; max-height: 0; overflow: hidden; opacity: 0; }
+.fi.op .fa { max-height: 500px; opacity: 1; }
+.fi.op .fai { border-top: 1px solid var(--brd); animation: ruleDrawFaq .4s ease forwards; }
+@keyframes ruleDrawFaq { from { border-top-color: transparent; } to { border-top-color: var(--brd); } }
+
+/* ═══ #9 CTA UNDERLINE ═══ */
+.cta-underline {
+  position: relative; display: inline-block;
+}
+.cta-underline::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: var(--gold);
+  transition: width .6s cubic-bezier(.2,.8,.2,1);
+}
+.cta-underline.drawn::after { width: 100%; }
+
 </style>
 </head>
 <body>
@@ -934,10 +1033,10 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 </section>
 
 
-<!-- ═══ RESULTS — Murder acquittal & $4.5M = hero treatment ═══ -->
+<!-- ═══ THE RECORD ═══ -->
 <section id="results">
   <div class="rh">
-    <div class="rv"><div class="st"><div class="stl"></div><span class="stt">Case Results</span></div><h2 class="sct">What the Work<br><span style="font-variant:small-caps;letter-spacing:.05em">Looked Like.</span></h2></div>
+    <div class="rv"><div class="st"><div class="stl"></div><span class="stt">The Record</span></div><h2 class="sct">What the Work<br><span style="font-variant:small-caps;letter-spacing:.05em">Looked Like.</span></h2></div>
     <p class="rd rv rv1">Every case turns on its own facts. Past results are presented here to show the range of matters this firm has handled — not as a guarantee of any particular outcome.</p>
   </div>
 
@@ -974,7 +1073,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
     <div class="sty-g">
       <div class="rvl">
         <div class="sty-q">
-          <div class="sqL">In His Own Words</div>
+          <div class="sqL">In His Own Words<span class="tw-cursor">|</span></div>
           <p class="sqT">"You do the work the right way, every time, and let the results speak. That's all I know."</p>
           <p class="sqA">— Andrew R. Farwell</p>
         </div>
@@ -1007,7 +1106,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 <!-- ═══ PRACTICE ═══ -->
 <section id="prac">
   <div class="prac-hd">
-    <div class="prac-hl rv"><div class="st"><div class="stl"></div><span class="stt">Practice Areas</span></div><h2 class="sct">Ten Areas of Law.<br>One <span class="eu">Standard of Care.</span></h2></div>
+    <div class="prac-hl rv"><div class="st"><div class="stl"></div><span class="stt">Practice Areas</span></div><h2 class="sct">Ten Areas of Law.<br>One <span class="eu">Standard.</span></h2></div>
     <p class="prac-hr rv rv1">Farwell Law handles civil and criminal matters — with particular depth in personal injury, criminal defense, and wrongful death.</p>
   </div>
   <div class="prac-tk" id="ptk">
@@ -1251,7 +1350,7 @@ footer { background:var(--bg-deep); border-top:1px solid var(--brd); padding:48p
 <!-- ═══ CTA ═══ -->
 <section id="cta">
   <div class="st stc" style="position:relative"><div class="stl"></div><span class="stt">Reach Out</span><div class="stl"></div></div>
-  <h2 class="cta-t rv">A Conversation Costs<br><span class="es">Nothing.</span></h2>
+  <h2 class="cta-t rv">A Conversation Costs<br><span class="es cta-underline">Nothing.</span></h2>
   <p class="cta-s rv">Whether you've been injured, charged with a crime, or need counsel — Andrew will personally review your situation. No obligation. Just a straight conversation about what comes next.</p>
   <div class="cta-a rv"><a href="#contact" class="bp">Talk to Andrew</a><a href="tel:6606652115" class="cta-ph">660.665.2115</a></div>
 </section>
@@ -1468,6 +1567,47 @@ setTimeout(function(){
       }
     });
   });
+})();
+
+
+/* ═══ #3 RESULTS STAMPS ═══ */
+(function(){
+  document.querySelectorAll('.res-hero,.res-card').forEach(function(c){
+    var v = c.querySelector('.ra-lg,.ra-sm');
+    if(!v) return;
+    var text = v.textContent.trim();
+    var stamp = document.createElement('div');
+    stamp.className = 'stamp';
+    stamp.textContent = text.match(/Not/i) ? 'VERDICT' : 'SETTLEMENT';
+    c.appendChild(stamp);
+  });
+})();
+
+/* ═══ #9 CTA UNDERLINE ON VIEWPORT ═══ */
+(function(){
+  var ul = document.querySelector('.cta-underline');
+  if(!ul) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ ul.classList.add('drawn'); obs.unobserve(ul); }
+    });
+  }, {threshold: 0.5});
+  obs.observe(ul);
+})();
+
+/* ═══ #4 BIO CURSOR — stop blinking after first view ═══ */
+(function(){
+  var cursor = document.querySelector('.tw-cursor');
+  if(!cursor) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        setTimeout(function(){ cursor.style.animation = 'none'; cursor.style.opacity = '0'; }, 4000);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.5});
+  obs.observe(cursor);
 })();
 
 </script>
